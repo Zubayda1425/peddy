@@ -941,6 +941,9 @@
   .w-\[3vw\] {
     width: 3vw;
   }
+  .w-\[4vw\] {
+    width: 4vw;
+  }
   .w-screen {
     width: 100vw;
   }
@@ -1812,6 +1815,9 @@
   }
   .text-\[3rem\] {
     font-size: 3rem;
+  }
+  .text-\[5rem\] {
+    font-size: 5rem;
   }
   .text-\[6rem\] {
     font-size: 6rem;
