@@ -1,18 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="text-[1vw]">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peddy</title>
+
+    <!-- Tailwind -->
     <link rel="stylesheet" href="./src/output.css">
+
+
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/7150fbc846.js" crossorigin="anonymous"></script>
+
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
 </head>
 
-<body>
-    <div class="flex flex-col justify-center items-center bg-amber-700">
-        <h1 class="text-7xl my-5 font-black">Peddy</h1>
-        <img src="images/pet.webp" alt="">
-    </div>
+<body class="mx-[7vw] max-auto border">
+    <!-- Navigation Bar -->
+    <nav class="">
+        <div class="flex items-center gap-26">
+            <img src="images/logo.webp" alt="">
+            <h1 class="text-[6rem] font-bold">Peddy</h1>
+        </div>
+
+        <div class="hidden">
+            <a href="">Home</a>
+            <a href="">Shop</a>
+            <a href="">Contact</a>
+        </div>
+
+        <div>
+            <a href="hidden">
+                <i class="fa-regular fa-user"></i>
+            </a>
+        </div>
+
+
+        <div>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
 </body>
 
 </html>
