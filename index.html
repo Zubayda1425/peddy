@@ -25,29 +25,47 @@
 
 <body class="mx-[7vw] max-auto border">
     <!-- Navigation Bar -->
-    <nav class="flex justify-between">
-        <div class="flex items-center gap-3">
-            <img class="w-[4vw]" src="images/logo.webp" alt="">
-            <h1 class="text-[5rem] font-bold">Peddy</h1>
+    <nav class="relative">
+        <div class="flex justify-between items-center">
+
+            <div class="flex items-center gap-3">
+                <img class="w-[4vw]" src="images/logo.webp" alt="">
+                <h1 class="text-[5rem] font-bold">Peddy</h1>
+            </div>
+
+            <div class="hidden">
+                <a href="">Home</a>
+                <a href="">Shop</a>
+                <a href="">Contact</a>
+            </div>
+
+            <div class="hidden">
+                <a href="">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+            </div>
+
+
+            <button onclick="toggleMenu()">
+                <i class="fa-solid fa-bars text-[4rem]">
+                </i>
+            </button>
+
         </div>
 
-        <div class="hidden">
-            <a href="">Home</a>
-            <a href="">Shop</a>
-            <a href="">Contact</a>
+        <div class=" text-[4rem] absolute right-0 h-0 overflow-hidden text-end w-[70vw] bg-theme_10 transition-all duration-700"
+            id="menu">
+            <div class="p-24 flex flex-col text-theme ">
+                <a class="hover:bg-theme_10 pl-20 py-10" href="">Profile</a>
+                <a class="hover:bg-theme_10 pl-20 py-10" href="">Home</a>
+                <a class="hover:bg-theme_10 pl-20 py-10" href="">Shop</a>
+                <a class="hover:bg-theme_10 pl-20 py-10" href="">Contact</a>
+            </div>
         </div>
 
-        <div class="hidden">
-            <a href="hidden">
-                <i class="fa-regular fa-user"></i>
-            </a>
-        </div>
-
-
-        <div>
-            <i class="fa-solid fa-bars"></i>
-        </div>
     </nav>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
