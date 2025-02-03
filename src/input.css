@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
-
+@layer{
+    .adoption-btn {
+        @apply flex justify-center items-center gap-5 border border-theme_15 px-[4.5vw] rounded-2xl hover:rounded-full hover:border-theme hover:bg-theme_10 focus:rounded-full focus:border-theme focus:bg-theme_10 md:py-[2.5vh]
+    }
+}
 
 @theme{
 

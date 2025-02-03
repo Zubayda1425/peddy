@@ -743,6 +743,15 @@
   .mb-\[5vw\] {
     margin-bottom: 5vw;
   }
+  .mb-\[8\] {
+    margin-bottom: 8;
+  }
+  .mb-\[8v\] {
+    margin-bottom: 8v;
+  }
+  .mb-\[8vw\] {
+    margin-bottom: 8vw;
+  }
   .box-border {
     box-sizing: border-box;
   }
@@ -851,35 +860,17 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
-  .w-\[0\%\] {
-    width: 0%;
-  }
   .w-\[4vw\] {
     width: 4vw;
-  }
-  .w-\[37\%\] {
-    width: 37%;
   }
   .w-\[50\%\] {
     width: 50%;
   }
-  .w-\[50\] {
-    width: 50;
-  }
   .w-\[50vw\] {
     width: 50vw;
   }
-  .w-\[5\] {
-    width: 5;
-  }
-  .w-\[60\%\] {
-    width: 60%;
-  }
   .w-\[60vw\] {
     width: 60vw;
-  }
-  .w-\[70\%\] {
-    width: 70%;
   }
   .w-\[70vw\] {
     width: 70vw;
@@ -1723,15 +1714,6 @@
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
-  .py-\[0\.5vh\] {
-    padding-block: 0.5vh;
-  }
-  .py-\[0\.5vw\] {
-    padding-block: 0.5vw;
-  }
-  .py-\[0\.vh\] {
-    padding-block: 0.vh;
-  }
   .py-\[1\.2vw\] {
     padding-block: 1.2vw;
   }
@@ -1783,11 +1765,20 @@
   .align-top {
     vertical-align: top;
   }
-  .text-\[\.5rem\] {
-    font-size: .5rem;
+  .text-\[1\.2rem\] {
+    font-size: 1.2rem;
+  }
+  .text-\[1\.3rem\] {
+    font-size: 1.3rem;
+  }
+  .text-\[1\.4rem\] {
+    font-size: 1.4rem;
   }
   .text-\[1\.5rem\] {
     font-size: 1.5rem;
+  }
+  .text-\[1\.5vw\] {
+    font-size: 1.5vw;
   }
   .text-\[1vw\] {
     font-size: 1vw;
@@ -1907,6 +1898,24 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
+  }
+  .text-\[1\.5\] {
+    color: 1.5;
+  }
+  .text-\[1\.5r\] {
+    color: 1.5r;
+  }
+  .text-\[1\.5v\] {
+    color: 1.5v;
+  }
+  .text-\[1\.\] {
+    color: 1.;
+  }
+  .text-\[1\.rem\] {
+    color: 1.rem;
+  }
+  .text-\[1\] {
+    color: 1;
   }
   .text-text {
     color: var(--color-text);
@@ -2473,6 +2482,11 @@
       font-size: 1.2rem;
     }
   }
+  .mbl\:text-\[1\.4rem\] {
+    @media (width >= 27rem) {
+      font-size: 1.4rem;
+    }
+  }
   .mbl\:text-\[1\.5rem\] {
     @media (width >= 27rem) {
       font-size: 1.5rem;
@@ -2508,11 +2522,6 @@
       padding-block: 2.5vh;
     }
   }
-  .md\:text-\[1\.5rem\] {
-    @media (width >= 48rem) {
-      font-size: 1.5rem;
-    }
-  }
   .lg\:w-\[2vw\] {
     @media (width >= 64rem) {
       width: 2vw;
@@ -2526,6 +2535,46 @@
   .lg\:text-\[2rem\] {
     @media (width >= 64rem) {
       font-size: 2rem;
+    }
+  }
+}
+@layer {
+  .adoption-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing) * 5);
+    border-radius: var(--radius-2xl);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--color-theme_15);
+    padding-inline: 4.5vw;
+    &:hover {
+      @media (hover: hover) {
+        border-radius: calc(infinity * 1px);
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-theme);
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-theme_10);
+      }
+    }
+    &:focus {
+      border-radius: calc(infinity * 1px);
+    }
+    &:focus {
+      border-color: var(--color-theme);
+    }
+    &:focus {
+      background-color: var(--color-theme_10);
+    }
+    @media (width >= 48rem) {
+      padding-block: 2.5vh;
     }
   }
 }
