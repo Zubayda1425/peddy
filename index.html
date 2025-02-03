@@ -23,37 +23,37 @@
 
 </head>
 
-<body class="mx-[7vw] max-auto border">
+<body class="mx-[7vw] mt-[5vw] max-auto ">
     <!-- Navigation Bar -->
     <nav class="relative">
         <div class="flex justify-between items-center">
 
             <div class="flex items-center gap-3">
-                <img class="w-[4vw]" src="images/logo.webp" alt="">
-                <h1 class="text-[5rem] font-bold">Peddy</h1>
+                <img class="w-[4vw] mbl:w-[3vw] lg:w-[2vw]" src="images/logo.webp" alt="">
+                <h1 class="text-[5rem] mbl:text-[3rem] lg:text-[2rem] font-bold">Peddy</h1>
             </div>
 
-            <div class="hidden">
+            <div class="hidden mbl:flex mbl:gap-7 text-text_60 font-semibold mbl:text-[1.5rem] lg:text-[1rem]">
                 <a href="">Home</a>
                 <a href="">Shop</a>
                 <a href="">Contact</a>
             </div>
 
-            <div class="hidden">
+            <div class="hidden mbl:block border border-navProfileBorder rounded-full mbl:text-[2rem lg:text-[1rem]]">
                 <a href="">
-                    <i class="fa-regular fa-user"></i>
+                    <i class="fa-regular fa-user text-text_70 p-5"></i>
                 </a>
             </div>
 
 
-            <button onclick="toggleMenu()">
+            <button onclick="toggleMenu()" class=" mbl:hidden">
                 <i class="fa-solid fa-bars text-[4rem]">
                 </i>
             </button>
 
         </div>
 
-        <div class=" text-[4rem] absolute -right-0 w-0 overflow-hidden text-end  bg-theme_10 transition-all duration-500"
+        <div class=" text-[4rem] absolute -right-0 w-0 overflow-hidden text-end  bg-theme_10 transition-all duration-500 "
             id="menu">
             <div class="p-24 flex flex-col text-theme ">
                 <a class="hover:bg-theme_10 pl-20 py-10" href="">Profile</a>
@@ -64,6 +64,9 @@
         </div>
 
     </nav>
+
+
+    
 
     <script src="script.js"></script>
 </body>
