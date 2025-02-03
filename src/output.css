@@ -722,11 +722,14 @@
   .mx-auto {
     margin-inline: auto;
   }
-  .my-\[1vw\] {
-    margin-block: 1vw;
-  }
   .my-\[3vw\] {
     margin-block: 3vw;
+  }
+  .my-\[10vw\] {
+    margin-block: 10vw;
+  }
+  .my-\[1vw\] {
+    margin-block: 1vw;
   }
   .my-\[4vw\] {
     margin-block: 4vw;
@@ -740,14 +743,20 @@
   .my-\[8vw\] {
     margin-block: 8vw;
   }
-  .my-\[10vw\] {
-    margin-block: 10vw;
-  }
   .my-\[vw\] {
     margin-block: vw;
   }
+  .mt-\[4vh\] {
+    margin-top: 4vh;
+  }
+  .mt-\[5vh\] {
+    margin-top: 5vh;
+  }
   .mt-\[5vw\] {
     margin-top: 5vw;
+  }
+  .mt-\[6vh\] {
+    margin-top: 6vh;
   }
   .mt-\[8vh\] {
     margin-top: 8vh;
@@ -757,6 +766,9 @@
   }
   .mt-\[10vw\] {
     margin-top: 10vw;
+  }
+  .mt-\[vh\] {
+    margin-top: vh;
   }
   .mb-\[2\] {
     margin-bottom: 2;
@@ -893,6 +905,15 @@
   .w-\[1-\] {
     width: 1-;
   }
+  .w-\[80rem\] {
+    width: 80rem;
+  }
+  .w-\[8rem\] {
+    width: 8rem;
+  }
+  .w-\[8vw\] {
+    width: 8vw;
+  }
   .w-\[100\] {
     width: 100;
   }
@@ -914,26 +935,35 @@
   .w-\[1rem\] {
     width: 1rem;
   }
+  .w-\[30\] {
+    width: 30;
+  }
+  .w-\[30v\] {
+    width: 30v;
+  }
+  .w-\[30vw\] {
+    width: 30vw;
+  }
+  .w-\[3\] {
+    width: 3;
+  }
+  .w-\[40vw\] {
+    width: 40vw;
+  }
   .w-\[4vw\] {
     width: 4vw;
-  }
-  .w-\[80rem\] {
-    width: 80rem;
-  }
-  .w-\[80vw\] {
-    width: 80vw;
-  }
-  .w-\[8rem\] {
-    width: 8rem;
-  }
-  .w-\[8vw\] {
-    width: 8vw;
   }
   .w-\[50vw\] {
     width: 50vw;
   }
+  .w-\[60vw\] {
+    width: 60vw;
+  }
   .w-\[70vw\] {
     width: 70vw;
+  }
+  .w-\[80vw\] {
+    width: 80vw;
   }
   .w-\[rem\] {
     width: rem;
@@ -1944,14 +1974,6 @@
     --tw-font-weight: 00;
     font-weight: 00;
   }
-  .font-\[600\] {
-    --tw-font-weight: 600;
-    font-weight: 600;
-  }
-  .font-\[60\] {
-    --tw-font-weight: 60;
-    font-weight: 60;
-  }
   .font-\[6\] {
     --tw-font-weight: 6;
     font-weight: 6;
@@ -1971,6 +1993,14 @@
   .font-\[2\] {
     --tw-font-weight: 2;
     font-weight: 2;
+  }
+  .font-\[600\] {
+    --tw-font-weight: 600;
+    font-weight: 600;
+  }
+  .font-\[60\] {
+    --tw-font-weight: 60;
+    font-weight: 60;
   }
   .font-\[700\] {
     --tw-font-weight: 700;
@@ -2616,6 +2646,11 @@
       margin-block: 3vw;
     }
   }
+  .mbl\:mb-\[1vw\] {
+    @media (width >= 27rem) {
+      margin-bottom: 1vw;
+    }
+  }
   .mbl\:mb-\[2vw\] {
     @media (width >= 27rem) {
       margin-bottom: 2vw;
@@ -2646,9 +2681,19 @@
       display: none;
     }
   }
+  .mbl\:w-\[0vw\] {
+    @media (width >= 27rem) {
+      width: 0vw;
+    }
+  }
   .mbl\:w-\[3vw\] {
     @media (width >= 27rem) {
       width: 3vw;
+    }
+  }
+  .mbl\:w-\[40vw\] {
+    @media (width >= 27rem) {
+      width: 40vw;
     }
   }
   .mbl\:w-\[50vw\] {
@@ -2686,6 +2731,16 @@
       font-size: 1rem;
     }
   }
+  .mbl\:text-\[2\.5rem\] {
+    @media (width >= 27rem) {
+      font-size: 2.5rem;
+    }
+  }
+  .mbl\:text-\[2rem\] {
+    @media (width >= 27rem) {
+      font-size: 2rem;
+    }
+  }
   .mbl\:text-\[3rem\] {
     @media (width >= 27rem) {
       font-size: 3rem;
@@ -2709,6 +2764,11 @@
   .mbl\:text-\[1re\] {
     @media (width >= 27rem) {
       color: 1re;
+    }
+  }
+  .mbl\:text-\[2\.rem\] {
+    @media (width >= 27rem) {
+      color: 2.rem;
     }
   }
   .lg\:w-\[2vw\] {
