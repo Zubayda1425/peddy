@@ -23,13 +23,13 @@
 
 </head>
 
-<body class=" ">
+<body>
 
     <!-- Navigation Bar -->
-    <nav class="relative mx-[7vw] mt-[5vw] max-auto">
+    <nav class="mbl:block mx-[7vw] mt-[5vw] max-auto relative">
 
         <!-- Navigation desktop -->
-        <div class="flex justify-between items-center">
+        <div class="grid mbl:grid-cols-3 items-center ">
 
             <!-- logo -->
             <div class="flex items-center gap-3">
@@ -38,26 +38,33 @@
             </div>
 
             <!-- nav links -->
-            <div class="hidden mbl:flex mbl:gap-7 text-text_60 font-semibold mbl:text-[1.5rem] lg:text-[1rem]">
+            <div
+                class="hidden mbl:flex mbl:justify-center mbl:gap-7 text-text_60 font-semibold mbl:text-[1.5rem] lg:text-[1rem]">
                 <a href="">Home</a>
                 <a href="">Shop</a>
                 <a href="">Contact</a>
             </div>
 
             <!-- nav profile -->
-            <div class="hidden mbl:block border border-navProfileBorder rounded-full mbl:text-[2rem lg:text-[1rem]]">
-                <a href="">
-                    <i class="fa-regular fa-user text-text_70 p-5"></i>
-                </a>
+            <div class="hidden mbl:flex mbl:justify-end">
+                <div
+                    class="w-fit mbl: border border-navProfileBorder rounded-full mbl:text-[2rem] lg:text-[1rem] mbl:border">
+                    <a href="">
+                        <i class="fa-regular fa-user text-text_70 p-5"></i>
+                    </a>
+                </div>
             </div>
 
-            <!-- small device dropdown menu icon -->
-            <button onclick="toggleMenu()" class="mbl:hidden">
-                <i class="fa-solid fa-bars text-[4rem]">
-                </i>
-            </button>
+
+
 
         </div>
+
+        <!-- small device dropdown menu icon -->
+        <button onclick="toggleMenu()" class="mbl:hidden ">
+            <i class="fa-solid fa-bars text-[4rem] absolute top-[25%] right-0">
+            </i>
+        </button>
 
         <!-- dropdown menu -->
         <div class=" text-[4rem] absolute -right-0 w-0 overflow-hidden text-end  bg-theme transition-all duration-500 "
@@ -81,7 +88,7 @@
             <!-- text portion -->
             <p class="text-[2.5rem] text-text_60 font-bold mb-[4vw] _____ mbl:text-[1.5rem] mbl:mb-[2vw]">Bringing
                 Families Together
-                ❤️‍🔥</p>
+            </p>
 
             <h1 class="text-[5rem] text-text font-[700] leading-20 mb-[5vw] _____ mbl:text-[4.5rem] mbl:mb-[2vw]">Your
                 Path to
