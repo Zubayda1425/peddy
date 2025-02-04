@@ -4,6 +4,11 @@
     .adoption-btn {
         @apply flex justify-center items-center gap-5 border border-theme_15 px-[4.5vw] py-[1.5vh] rounded-2xl hover:rounded-full hover:border-theme hover:bg-theme_10 focus:rounded-full focus:border-theme focus:bg-theme_10 md:py-[2.5vh]
     }
+
+
+    .peddyCard-button{
+        @apply border border-theme_10  mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg  hover:bg-theme hover:text-white hover:border-0 focus:bg-theme focus:text-white focus:border-0
+    }
 }
 
 @theme{

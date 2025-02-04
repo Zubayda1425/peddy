@@ -23,30 +23,35 @@
 
 </head>
 
-<body class="mx-[7vw] mt-[5vw] max-auto ">
+<body class=" ">
 
-    '<!-- Navigation Bar -->
-    <nav class="relative">
+    <!-- Navigation Bar -->
+    <nav class="relative mx-[7vw] mt-[5vw] max-auto">
+
+        <!-- Navigation desktop -->
         <div class="flex justify-between items-center">
 
+            <!-- logo -->
             <div class="flex items-center gap-3">
                 <img class="w-[4vw] mbl:w-[3vw] lg:w-[2vw]" src="images/logo.webp" alt="">
                 <h1 class="text-[5rem] mbl:text-[3rem] lg:text-[2rem] font-bold">Peddy</h1>
             </div>
 
+            <!-- nav links -->
             <div class="hidden mbl:flex mbl:gap-7 text-text_60 font-semibold mbl:text-[1.5rem] lg:text-[1rem]">
                 <a href="">Home</a>
                 <a href="">Shop</a>
                 <a href="">Contact</a>
             </div>
 
+            <!-- nav profile -->
             <div class="hidden mbl:block border border-navProfileBorder rounded-full mbl:text-[2rem lg:text-[1rem]]">
                 <a href="">
                     <i class="fa-regular fa-user text-text_70 p-5"></i>
                 </a>
             </div>
 
-
+            <!-- small device dropdown menu icon -->
             <button onclick="toggleMenu()" class="mbl:hidden">
                 <i class="fa-solid fa-bars text-[4rem]">
                 </i>
@@ -54,6 +59,7 @@
 
         </div>
 
+        <!-- dropdown menu -->
         <div class=" text-[4rem] absolute -right-0 w-0 overflow-hidden text-end  bg-theme transition-all duration-500 "
             id="menu">
             <div class="p-24 flex flex-col text-white ">
@@ -67,11 +73,12 @@
     </nav>
 
     <!-- main section -->
-    <main>
+    <main class="mx-[7vw] mt-[5vw] max-auto">
 
         <!-- banner -->
-        <div class="hidden mt-[8vh] text-center  w-[70vw] mx-auto _____ mbl:w-[50vw] mbl:my-[3vw]">
+        <div class=" mt-[8vh] text-center  w-[70vw] mx-auto _____ mbl:w-[50vw] mbl:my-[3vw]">
 
+            <!-- text portion -->
             <p class="text-[2.5rem] text-text_60 font-bold mb-[4vw] _____ mbl:text-[1.5rem] mbl:mb-[2vw]">Bringing
                 Families Together
                 ❤️‍🔥</p>
@@ -91,11 +98,13 @@
                 of a page when
                 looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
 
+            <!-- banner button -->
             <button
                 class="border bg-theme text-white px-[3vw] py-[1.2vw] rounded-2xl text-[2rem] font-semibold mb-[3vw] _____ mbl:px-[2vw] mbl:py-[0.8vw] mbl:text-[1.2rem] mbl:mb-[3vw]">
                 View More
             </button>
 
+            <!-- banner image -->
             <div>
                 <img src="images/pet.webp" alt="">
             </div>
@@ -103,39 +112,48 @@
 
 
         <!-- Home -->
-        <div class="hidden mt-[6vh] text-center  w-[60vw] mx-auto _____ mbl:w-[40vw] mbl:my-[3vw]">
+        <div class=" mt-[6vh] text-center  w-[60vw] mx-auto _____ mbl:w-[40vw] mbl:my-[3vw]">
+
+            <!-- adopt selection heading -->
             <h1>
                 <h1 class="text-[4rem] text-text font-[800] leading-20 mb-[5vw] _____ mbl:text-[2.5rem] mbl:mb-[1vw]">
                     Adopt Your Best Friend</h1>
             </h1>
 
+            <!-- adopt selection description -->
             <p class="text-[2.2rem] text-text_60 font-semibold mb-[4vw] _____ mbl:text-[1rem] mbl:mb-[2vw]">It is a long
                 established fact that a reader will be distracted by the readable content of a page when looking at its
                 layout. The point of using Lorem Ipsum is that it has a.</p>
         </div>
 
-
         <!-- select Adoption -->
         <div class=" flex justify-center gap-[2vw] text-[2rem] font-extrabold text-text my-[8vh] mbl:text-[1.5rem] ">
 
+            <!-- dog -->
             <button class="adoption-btn">
 
                 <img class="w-[50%] md:w-[37%]" src="images/Peddy Image/dog.svg" alt="">
                 <p>Dogs</p>
 
             </button>
+
+            <!-- cat -->
             <button class="adoption-btn">
 
                 <img class="w-[50%] md:w-[37%]" src="images/Peddy Image/cat.svg" alt="">
                 <p>Cats</p>
 
             </button>
+
+            <!-- Rabbit -->
             <button class="adoption-btn">
 
                 <img class="w-[50%] md:w-[37%]" src="images/Peddy Image/rabbit.svg" alt="">
                 <p>Rabbits</p>
 
             </button>
+
+            <!-- bird -->
             <button class="adoption-btn">
 
                 <img class="w-[50%] md:w-[37%]" src="images/Peddy Image/parrot.svg" alt="">
@@ -146,7 +164,11 @@
 
         <!-- Pet Section heading -->
         <div class="flex justify-between items-center mb-[3vw]">
+
+            <!-- heading -->
             <h1 class="text-[2rem] text-text font-bold mbl:text-[1.4rem]">Best Deal For you</h1>
+
+            <!-- sort by price btn -->
             <button
                 class="border bg-theme text-white px-[3vw] py-[1.2vw] rounded-2xl text-[2rem] font-semibold _____ mbl:px-[2vw] mbl:py-[0.8vw] mbl:text-[1.2rem] ">
                 Sort by Price
@@ -160,6 +182,59 @@
             <div
                 class="border border-text_10 col-span-3 mbl:col-span-2 sm:col-span-3 grid grid-cols-1 mbl:grid-cols-2 sm:grid-cols-3 gap-[1vw] p-[1vw] rounded-xl h-fit">
 
+                <!-- pet card (MAIN CARD ___ dONT'T DELETE IT) -->
+                <div class="border border-text_10 rounded-xl  flex-1 p-[1.2vw]">
+
+                    <!-- thumbnail -->
+                    <div class="mb-[1.2vw]">
+                        <img src="images/temp/petImage.svg" alt="">
+                    </div>
+
+                    <!-- Pet Information -->
+                    <div>
+                        <h1 class="text-text font-extrabold text-[2.5rem] md:text-[1.2rem] mbl:text-[1.7rem]">Mister
+                            Tartosh</h1>
+
+                        <div
+                            class="flex flex-col gap-[0.3vw] my-[0.7vw] text-text_60 text-[2rem] mbl:text-[1.3rem] md:text-[1rem]">
+                            <div class="flex gap-[0.6vw]">
+                                <img class="w-[1.2vw]" src="images/Icon Image/Breed.svg" alt="">
+                                <p>Breed: <span>Golder retriever</span></p>
+                            </div>
+                            <div class="flex gap-[0.6vw]">
+                                <img class="w-[1.2vw]" src="images/Icon Image/Birth.svg" alt="">
+                                <p>Birth: <span>2024</span></p>
+                            </div>
+                            <div class="flex gap-[0.6vw]">
+                                <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
+                                <p>Gender: <span>Female</span></p>
+                            </div>
+                            <div class="flex gap-[0.6vw]">
+                                <img class="w-[1.2vw]" src="images/Icon Image/Price.svg" alt="">
+                                <p>Price: <span>199</span>$</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- hr -->
+                    <hr class="border border-text_10 my-[3vw] mbl:mb-[0.7vw]">
+
+                    <!-- pet card buttons -->
+                    <div class="flex justify-between">
+                        <button class="peddyCard-button text-text_60 text-[3rem]">
+                            <i class="fa-regular fa-thumbs-up"></i>
+                        </button>
+                        <button class="peddyCard-button text-theme text-[2.5rem] font-bold">
+                            <p>Adopt</p>
+                        </button>
+                        <button class="peddyCard-button text-theme text-[2.5rem] font-bold">
+                            <p>Details</p>
+                        </button>
+                    </div>
+                </div>
+
+
+
                 <!-- pet card -->
                 <div class="border border-text_10 rounded-xl  flex-1 p-[1.2vw]">
 
@@ -429,63 +504,6 @@
                         </button>
                     </div>
                 </div>
-
-                <!-- pet card -->
-                <div class="border border-text_10 rounded-xl  flex-1 p-[1.2vw]">
-
-                    <!-- thumbnail -->
-                    <div class="mb-[1.2vw]">
-                        <img src="images/temp/petImage.svg" alt="">
-                    </div>
-
-                    <!-- Pet Information -->
-                    <div>
-                        <h1 class="text-text font-extrabold text-[2.5rem] md:text-[1.2rem] mbl:text-[1.7rem]">Mister
-                            Tartosh</h1>
-
-                        <div
-                            class="flex flex-col gap-[0.3vw] my-[0.7vw] text-text_60 text-[2rem] mbl:text-[1.3rem] md:text-[1rem]">
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Breed.svg" alt="">
-                                <p>Breed: <span>Golder retriever</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Birth.svg" alt="">
-                                <p>Birth: <span>2024</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
-                                <p>Gender: <span>Female</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Price.svg" alt="">
-                                <p>Price: <span>199</span>$</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- hr -->
-                    <hr class="border border-text_10 my-[3vw] mbl:mb-[0.7vw]">
-
-                    <!-- pet card buttons -->
-                    <div class="flex justify-between">
-                        <button
-                            class="border border-theme_10 text-text_60 text-[3rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg hover:bg-theme hover:text-white hover:border-0">
-                            <i class="fa-regular fa-thumbs-up"></i>
-                        </button>
-                        <button
-                            class="border border-theme_10 text-theme text-[2.5rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg font-bold hover:bg-theme hover:text-white hover:border-0">
-                            <p>Adopt</p>
-                        </button>
-                        <button
-                            class="border border-theme_10 text-theme text-[2.5rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg font-bold hover:bg-theme hover:text-white hover:border-0">
-                            <p>Details</p>
-                        </button>
-                    </div>
-                </div>
-
-
-
             </div>
 
             <!-- Peddy Select -->
@@ -501,6 +519,80 @@
             </div>
         </div>
     </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-text flex flex-col  p-[7vw]">
+
+        <!-- footer heading -->
+        <div class="flex justify-between items-baseline">
+
+            <!-- logo -->
+            <div class="flex items-center gap-3 w-[17vw]">
+                <img class="w-[4vw] mbl:w-[3vw] lg:w-[2vw]" src="images/logo.webp" alt="">
+                <h1 class="text-white text-[5rem] mbl:text-[3rem] lg:text-[2rem] font-bold">Peddy</h1>
+            </div>
+
+
+            <!-- useful link heading -->
+            <h1 class="text-[#FFFFFFE6] mb-[1.5vw] text-[1.2rem] w-[17vw]">Useful Links</h1>
+
+
+            <!-- drop msg heading -->
+            <h1 class="text-[#FFFFFFE6] mb-[1.5vw] text-[1.2rem] w-[17vw]">Drop a Message</h1>
+
+        </div>
+
+        <!-- footer Info -->
+        <div class="flex justify-between">
+
+            <!-- left: adress/contact/social links -->
+            <div class="w-[17vw]">
+
+                <!-- adress/contact -->
+                <div class="text-[#FFFFFFE6] text-[1rem] flex flex-col gap-[0.5vw] mb-[2vw]">
+
+                    <p>Location: av. Washington 165, NY CA 54003</p>
+                    <p>Phone: +31 85 964 47 25</p>
+                    <p>Email: info@yourdomain.com</p>
+                    <p>Openings hours: 9.00 AM - 5.00 PM</p>
+
+                </div>
+
+
+                <!-- social Links -->
+                <div class="flex gap-[1.5vw]">
+                    <a href=""><img src="images/Social Image/Facebook.svg" alt=""></a>
+                    <a href=""><img src="images/Social Image/Twitter.svg" alt=""></a>
+                    <a href=""><img src="images/Social Image/youtube.svg" alt=""></a>
+                    <a href=""><img src="images/Social Image/Instagram.svg" alt=""></a>
+                </div>
+
+            </div>
+
+            <!-- middle: useful links -->
+            <div class="flex flex-col text-[#FFFFFF99] w-[17vw]">
+                <a href="">Home</a>
+                <a href="">About Us</a>
+                <a href="">Animals</a>
+                <a href="">Foundation</a>
+                <a href="">Contact</a>
+            </div>
+
+
+            <!-- right: drop msg -->
+            <div class="flex flex-col gap-[1vw] w-[17vw]">
+                <input type="text" placeholder="Enter your email"
+                    class="bg-[#FFFFFF0D] text-[#FFFFFF99] pl-[1.5vw] py-[0.8vw] rounded-xl">
+
+                <button class=" bg-theme text-white px-[3vw] py-[0.7vw] rounded-xl text-[1.2rem] font-semibold">
+                    Subscribe
+                </button>
+            </div>
+
+        </div>
+
+    </footer>
 
 
     <script src="script.js"></script>
