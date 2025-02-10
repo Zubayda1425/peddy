@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="text-[1vw]">
+<html lang="en" class="text-[1vw] scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -108,18 +108,22 @@
             <!-- banner button -->
             <button
                 class="border bg-theme text-white px-[3vw] py-[1.2vw] rounded-2xl text-[2rem] font-semibold mb-[3vw] _____ mbl:px-[2vw] mbl:py-[0.8vw] mbl:text-[1.2rem] mbl:mb-[3vw]">
-                View More
+                <a href="#adoptBestFriend">View More</a>
             </button>
 
             <!-- banner image -->
             <div>
-                <img src="images/pet.webp" alt="">
+                <img src=" images/pet.webp" alt="">
             </div>
         </div>
 
 
-        <!-- Home -->
-        <div class=" mt-[6vh] text-center  w-[60vw] mx-auto _____ mbl:w-[40vw] mbl:my-[3vw]">
+
+        <!-- home start -->
+
+
+        <!-- adopts best friend heading  -->
+        <div class=" mt-[6vh] text-center  w-[60vw] mx-auto _____ mbl:w-[40vw] mbl:my-[3vw]" id="adoptBestFriend">
 
             <!-- adopt selection heading -->
             <h1>
@@ -134,39 +138,40 @@
         </div>
 
         <!-- select Adoption -->
-        <div class=" flex justify-center gap-[2vw] text-[2rem] font-extrabold text-text my-[8vh] mbl:text-[1.5rem] ">
+        <div class=" flex justify-center gap-[2vw] text-[2rem] font-extrabold text-text my-[8vh] mbl:text-[1.5rem]"
+            id="adoption_category">
 
             <!-- dog -->
-            <button class="adoption-btn">
+            <!-- <button class="adoption-btn">
 
                 <img class="w-[50%] md:w-[37%]" src="images/Peddy Image/dog.svg" alt="">
                 <p>Dogs</p>
 
-            </button>
+            </button> -->
 
             <!-- cat -->
-            <button class="adoption-btn">
+            <!-- <button class="adoption-btn">
 
                 <img class="w-[50%] md:w-[37%]" src="images/Peddy Image/cat.svg" alt="">
                 <p>Cats</p>
 
-            </button>
+            </button> -->
 
             <!-- Rabbit -->
-            <button class="adoption-btn">
+            <!-- <button class="adoption-btn">
 
                 <img class="w-[50%] md:w-[37%]" src="images/Peddy Image/rabbit.svg" alt="">
                 <p>Rabbits</p>
 
-            </button>
+            </button> -->
 
             <!-- bird -->
-            <button class="adoption-btn">
+            <!-- <button class="adoption-btn">
 
                 <img class="w-[50%] md:w-[37%]" src="images/Peddy Image/parrot.svg" alt="">
                 <p>Birds</p>
 
-            </button>
+            </button> -->
         </div>
 
         <!-- Pet Section heading -->
@@ -186,19 +191,19 @@
         <div class="grid grid-cols-5 mbl:grid-cols-3 sm:grid-cols-4 gap-[1vw] mb-[8vw]">
 
             <!-- peddy Card container-->
-            <div
-                class="border border-text_10 col-span-3 mbl:col-span-2 sm:col-span-3 grid grid-cols-1 mbl:grid-cols-2 sm:grid-cols-3 gap-[1vw] p-[1vw] rounded-xl h-fit">
+            <div class="border border-text_10 col-span-3 mbl:col-span-2 sm:col-span-3 grid grid-cols-1 mbl:grid-cols-2 sm:grid-cols-3 gap-[1vw] p-[1vw] rounded-xl h-fit"
+                id="pet_container">
 
                 <!-- pet card (MAIN CARD ___ dONT'T DELETE IT) -->
-                <div class="border border-text_10 rounded-xl  flex-1 p-[1.2vw]">
+                <!-- <div class="border border-text_10 rounded-xl  flex-1 p-[1.2vw]"> -->
 
-                    <!-- thumbnail -->
-                    <div class="mb-[1.2vw]">
+                <!-- thumbnail -->
+                <!-- <div class="mb-[1.2vw]">
                         <img src="images/temp/petImage.svg" alt="">
-                    </div>
+                    </div> -->
 
-                    <!-- Pet Information -->
-                    <div>
+                <!-- Pet Information -->
+                <!-- <div>
                         <h1 class="text-text font-extrabold text-[2.5rem] md:text-[1.2rem] mbl:text-[1.7rem]">Mister
                             Tartosh</h1>
 
@@ -221,13 +226,13 @@
                                 <p>Price: <span>199</span>$</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <!-- hr -->
-                    <hr class="border border-text_10 my-[3vw] mbl:mb-[0.7vw]">
+                <!-- hr -->
+                <!-- <hr class="border border-text_10 my-[3vw] mbl:mb-[0.7vw]"> -->
 
-                    <!-- pet card buttons -->
-                    <div class="flex justify-between">
+                <!-- pet card buttons -->
+                <!-- <div class="flex justify-between">
                         <button class="peddyCard-button text-text_60 text-[3rem]">
                             <i class="fa-regular fa-thumbs-up"></i>
                         </button>
@@ -237,280 +242,29 @@
                         <button class="peddyCard-button text-theme text-[2.5rem] font-bold">
                             <p>Details</p>
                         </button>
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div> -->
+            </div>
 
 
+            <!-- error -->
+            <div class="hidden col-span-3 bg-[#D2DCFD40] flex flex-col justify-center items-center p-[4vw]"
+                id="error_msg">
+                <img class="size-[10vw]" src="images/error.webp" alt="">
+                <h1
+                    class=" text-center text-[4rem] text-text font-[800] mb-[5vw] text-nowrap _____ mbl:text-[2.5rem] mbl:mb-[1vw]">
+                    No Information Available
+                </h1>
 
-                <!-- pet card -->
-                <div class="border border-text_10 rounded-xl  flex-1 p-[1.2vw]">
-
-                    <!-- thumbnail -->
-                    <div class="mb-[1.2vw]">
-                        <img src="images/temp/petImage.svg" alt="">
-                    </div>
-
-                    <!-- Pet Information -->
-                    <div>
-                        <h1 class="text-text font-extrabold text-[2.5rem] md:text-[1.2rem] mbl:text-[1.7rem]">Mister
-                            Tartosh</h1>
-
-                        <div
-                            class="flex flex-col gap-[0.3vw] my-[0.7vw] text-text_60 text-[2rem] mbl:text-[1.3rem] md:text-[1rem]">
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Breed.svg" alt="">
-                                <p>Breed: <span>Golder retriever</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Birth.svg" alt="">
-                                <p>Birth: <span>2024</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
-                                <p>Gender: <span>Female</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Price.svg" alt="">
-                                <p>Price: <span>199</span>$</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- hr -->
-                    <hr class="border border-text_10 my-[3vw] mbl:mb-[0.7vw]">
-
-                    <!-- pet card buttons -->
-                    <div class="flex justify-between">
-                        <button
-                            class="border border-theme_10 text-text_60 text-[3rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg hover:bg-theme hover:text-white hover:border-0">
-                            <i class="fa-regular fa-thumbs-up"></i>
-                        </button>
-                        <button
-                            class="border border-theme_10 text-theme text-[2.5rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg font-bold hover:bg-theme hover:text-white hover:border-0">
-                            <p>Adopt</p>
-                        </button>
-                        <button
-                            class="border border-theme_10 text-theme text-[2.5rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg font-bold hover:bg-theme hover:text-white hover:border-0">
-                            <p>Details</p>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- pet card -->
-                <div class="border border-text_10 rounded-xl  flex-1 p-[1.2vw]">
-
-                    <!-- thumbnail -->
-                    <div class="mb-[1.2vw]">
-                        <img src="images/temp/petImage.svg" alt="">
-                    </div>
-
-                    <!-- Pet Information -->
-                    <div>
-                        <h1 class="text-text font-extrabold text-[2.5rem] md:text-[1.2rem] mbl:text-[1.7rem]">Mister
-                            Tartosh</h1>
-
-                        <div
-                            class="flex flex-col gap-[0.3vw] my-[0.7vw] text-text_60 text-[2rem] mbl:text-[1.3rem] md:text-[1rem]">
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Breed.svg" alt="">
-                                <p>Breed: <span>Golder retriever</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Birth.svg" alt="">
-                                <p>Birth: <span>2024</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
-                                <p>Gender: <span>Female</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Price.svg" alt="">
-                                <p>Price: <span>199</span>$</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- hr -->
-                    <hr class="border border-text_10 my-[3vw] mbl:mb-[0.7vw]">
-
-                    <!-- pet card buttons -->
-                    <div class="flex justify-between">
-                        <button
-                            class="border border-theme_10 text-text_60 text-[3rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg hover:bg-theme hover:text-white hover:border-0">
-                            <i class="fa-regular fa-thumbs-up"></i>
-                        </button>
-                        <button
-                            class="border border-theme_10 text-theme text-[2.5rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg font-bold hover:bg-theme hover:text-white hover:border-0">
-                            <p>Adopt</p>
-                        </button>
-                        <button
-                            class="border border-theme_10 text-theme text-[2.5rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg font-bold hover:bg-theme hover:text-white hover:border-0">
-                            <p>Details</p>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- pet card -->
-                <div class="border border-text_10 rounded-xl  flex-1 p-[1.2vw]">
-
-                    <!-- thumbnail -->
-                    <div class="mb-[1.2vw]">
-                        <img src="images/temp/petImage.svg" alt="">
-                    </div>
-
-                    <!-- Pet Information -->
-                    <div>
-                        <h1 class="text-text font-extrabold text-[2.5rem] md:text-[1.2rem] mbl:text-[1.7rem]">Mister
-                            Tartosh</h1>
-
-                        <div
-                            class="flex flex-col gap-[0.3vw] my-[0.7vw] text-text_60 text-[2rem] mbl:text-[1.3rem] md:text-[1rem]">
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Breed.svg" alt="">
-                                <p>Breed: <span>Golder retriever</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Birth.svg" alt="">
-                                <p>Birth: <span>2024</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
-                                <p>Gender: <span>Female</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Price.svg" alt="">
-                                <p>Price: <span>199</span>$</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- hr -->
-                    <hr class="border border-text_10 my-[3vw] mbl:mb-[0.7vw]">
-
-                    <!-- pet card buttons -->
-                    <div class="flex justify-between">
-                        <button
-                            class="border border-theme_10 text-text_60 text-[3rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg hover:bg-theme hover:text-white hover:border-0">
-                            <i class="fa-regular fa-thumbs-up"></i>
-                        </button>
-                        <button
-                            class="border border-theme_10 text-theme text-[2.5rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg font-bold hover:bg-theme hover:text-white hover:border-0">
-                            <p>Adopt</p>
-                        </button>
-                        <button
-                            class="border border-theme_10 text-theme text-[2.5rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg font-bold hover:bg-theme hover:text-white hover:border-0">
-                            <p>Details</p>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- pet card -->
-                <div class="border border-text_10 rounded-xl  flex-1 p-[1.2vw]">
-
-                    <!-- thumbnail -->
-                    <div class="mb-[1.2vw]">
-                        <img src="images/temp/petImage.svg" alt="">
-                    </div>
-
-                    <!-- Pet Information -->
-                    <div>
-                        <h1 class="text-text font-extrabold text-[2.5rem] md:text-[1.2rem] mbl:text-[1.7rem]">Mister
-                            Tartosh</h1>
-
-                        <div
-                            class="flex flex-col gap-[0.3vw] my-[0.7vw] text-text_60 text-[2rem] mbl:text-[1.3rem] md:text-[1rem]">
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Breed.svg" alt="">
-                                <p>Breed: <span>Golder retriever</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Birth.svg" alt="">
-                                <p>Birth: <span>2024</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
-                                <p>Gender: <span>Female</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Price.svg" alt="">
-                                <p>Price: <span>199</span>$</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- hr -->
-                    <hr class="border border-text_10 my-[3vw] mbl:mb-[0.7vw]">
-
-                    <!-- pet card buttons -->
-                    <div class="flex justify-between">
-                        <button
-                            class="border border-theme_10 text-text_60 text-[3rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg hover:bg-theme hover:text-white hover:border-0">
-                            <i class="fa-regular fa-thumbs-up"></i>
-                        </button>
-                        <button
-                            class="border border-theme_10 text-theme text-[2.5rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg font-bold hover:bg-theme hover:text-white hover:border-0">
-                            <p>Adopt</p>
-                        </button>
-                        <button
-                            class="border border-theme_10 text-theme text-[2.5rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg font-bold hover:bg-theme hover:text-white hover:border-0">
-                            <p>Details</p>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- pet card -->
-                <div class="border border-text_10 rounded-xl  flex-1 p-[1.2vw]">
-
-                    <!-- thumbnail -->
-                    <div class="mb-[1.2vw]">
-                        <img src="images/temp/petImage.svg" alt="">
-                    </div>
-
-                    <!-- Pet Information -->
-                    <div>
-                        <h1 class="text-text font-extrabold text-[2.5rem] md:text-[1.2rem] mbl:text-[1.7rem]">Mister
-                            Tartosh</h1>
-
-                        <div
-                            class="flex flex-col gap-[0.3vw] my-[0.7vw] text-text_60 text-[2rem] mbl:text-[1.3rem] md:text-[1rem]">
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Breed.svg" alt="">
-                                <p>Breed: <span>Golder retriever</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Birth.svg" alt="">
-                                <p>Birth: <span>2024</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
-                                <p>Gender: <span>Female</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Price.svg" alt="">
-                                <p>Price: <span>199</span>$</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- hr -->
-                    <hr class="border border-text_10 my-[3vw] mbl:mb-[0.7vw]">
-
-                    <!-- pet card buttons -->
-                    <div class="flex justify-between">
-                        <button
-                            class="border border-theme_10 text-text_60 text-[3rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg hover:bg-theme hover:text-white hover:border-0">
-                            <i class="fa-regular fa-thumbs-up"></i>
-                        </button>
-                        <button
-                            class="border border-theme_10 text-theme text-[2.5rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg font-bold hover:bg-theme hover:text-white hover:border-0">
-                            <p>Adopt</p>
-                        </button>
-                        <button
-                            class="border border-theme_10 text-theme text-[2.5rem] mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg font-bold hover:bg-theme hover:text-white hover:border-0">
-                            <p>Details</p>
-                        </button>
-                    </div>
-                </div>
+                <!-- adopt selection description -->
+                <p
+                    class="text-center text-[2.2rem] text-text_60 font-semibold mb-[4vw] _____ mbl:text-[1rem] mbl:mb-[2vw]">
+                    It
+                    is a long established fact that a reader will be distracted by the readable content of a page
+                    when
+                    looking at
+                    its layout. The point of using Lorem Ipsum is that it has a.
+                </p>
             </div>
 
             <!-- Peddy Select -->
