@@ -67,6 +67,9 @@ const showAllPet = async () => {
     const res = await fetch(`https://openapi.programming-hero.com/api/peddy/pets`);
     const dataJson = await res.json();
     const data = dataJson.pets;
+    document.getElementById("sort_by_price").addEventListener("click", function () {
+        sortByPrice(data);
+    });
     addPet(data);
 }
 showAllPet();
@@ -78,7 +81,40 @@ const showCategorizedPet = async (category) => {
     const res = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`);
     const dataJson = await res.json();
     const data = dataJson.data;
+    document.getElementById("sort_by_price").addEventListener("click", function () {
+        sortByPrice(data);
+    });
     addPet(data);
+}
+
+
+//sort by price 
+const sortByPrice = (data) => {
+    let price = [];
+    let sortedData = [];
+
+
+    data.forEach(pet => {
+        if (!price.includes(pet.price)) {
+            price.push(pet.price);
+        }
+    });
+
+    price.sort(function (a, b) {
+        return b - a
+    });
+
+
+    price.forEach(petPrice => {
+        data.forEach(pet => {
+            if (pet.price === petPrice) {
+                sortedData.push(pet);
+            }
+        })
+    })
+
+    // p(sortedData);
+    addPet(sortedData);
 }
 
 
@@ -106,30 +142,30 @@ const addPet = (petData) => {
             petDetails.innerHTML = `
                             <!-- thumbnail -->
                             <div class="mb-[1.2vw]">
-                                <img src="${pet.image}" alt="">
+                                <img src="${pet?.image || ' Not Available'}" alt="">
                             </div>
     
                             <!-- Pet Information -->
                             <div>
-                                <h1 class="text-text font-extrabold text-[2.5rem] md:text-[1.2rem] mbl:text-[1.7rem]">${pet.pet_name}</h1>
+                                <h1 class="text-text font-extrabold text-[2.5rem] md:text-[1.2rem] mbl:text-[1.7rem]">${pet?.pet_name || ' Not Available'}</h1>
     
                                 <div
                                     class="flex flex-col gap-[0.3vw] my-[0.7vw] text-text_60 text-[2rem] mbl:text-[1.3rem] md:text-[1rem]">
                                     <div class="flex gap-[0.6vw]">
                                         <img class="w-[1.2vw]" src="images/Icon Image/Breed.svg" alt="">
-                                        <p>Breed: <span>${pet.breed}</span></p>
+                                        <p>Breed: <span>${pet?.breed || ' Not Available'}</span></p>
                                     </div>
                                     <div class="flex gap-[0.6vw]">
                                         <img class="w-[1.2vw]" src="images/Icon Image/Birth.svg" alt="">
-                                        <p>Birth: <span>${pet.date_of_birth}</span></p>
+                                        <p>Birth: <span>${pet?.date_of_birth || ' Not Available'}</span></p>
                                     </div>
                                     <div class="flex gap-[0.6vw]">
                                         <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
-                                        <p>Gender: <span>${pet.gender}</span></p>
+                                        <p>Gender: <span>${pet?.gender || ' Not Available'}</span></p>
                                     </div>
                                     <div class="flex gap-[0.6vw]">
                                         <img class="w-[1.2vw]" src="images/Icon Image/Price.svg" alt="">
-                                        <p>Price: <span>${pet.price}</span>$</p>
+                                        <p>Price: <span>${pet?.price || ' 00'}</span>$</p>
                                     </div>
                                 </div>
                             </div>
@@ -139,13 +175,13 @@ const addPet = (petData) => {
     
                             <!-- pet card buttons -->
                             <div class="flex justify-between">
-                                <button class="peddyCard-button text-text_60 text-[3rem]">
+                                <button class="peddyCard-button text-text_60 text-[3rem]" id="like" onclick="showThumbnail('${pet.image}')">
                                     <i class="fa-regular fa-thumbs-up"></i>
                                 </button>
-                                <button class="peddyCard-button text-theme text-[2.5rem] font-bold">
+                                <button class="peddyCard-button text-theme text-[2.5rem] font-bold" id="adopt">
                                     <p>Adopt</p>
                                 </button>
-                                <button class="peddyCard-button text-theme text-[2.5rem] font-bold">
+                                <button class="peddyCard-button text-theme text-[2.5rem] font-bold" id="details">
                                     <p>Details</p>
                                 </button>
                             </div>
@@ -160,4 +196,23 @@ const addPet = (petData) => {
     }
 }
 
-// showAllPet();
+
+//show thumbnail 
+const showThumbnail = (petImage) => {
+    p(petImage);
+    const likedDiv = id("likedPet");
+    const petThumb = document.createElement("div");
+    petThumb.innerHTML = `
+    <img src="${petImage}" alt="">
+    `;
+    likedDiv.appendChild(petThumb);
+}
+
+
+
+
+
+
+// _________________________________________________Peddy Sort by price________________________________________________________
+
+
