@@ -80,10 +80,10 @@
     </nav>
 
     <!-- main section -->
-    <main class="mx-[7vw] mt-[5vw] max-auto">
+    <main class=" mx-[7vw] mt-[5vw] max-auto">
 
         <!-- banner -->
-        <div class=" mt-[8vh] text-center  w-[70vw] mx-auto _____ mbl:w-[50vw] mbl:my-[3vw]">
+        <div class="hidden mt-[8vh] text-center  w-[70vw] mx-auto _____ mbl:w-[50vw] mbl:my-[3vw]">
 
             <!-- text portion -->
             <p class="text-[2.5rem] text-text_60 font-bold mb-[4vw] _____ mbl:text-[1.5rem] mbl:mb-[2vw]">Bringing
@@ -123,7 +123,7 @@
 
 
         <!-- adopts best friend heading  -->
-        <div class=" mt-[6vh] text-center  w-[60vw] mx-auto _____ mbl:w-[40vw] mbl:my-[3vw]" id="adoptBestFriend">
+        <div class="hidden mt-[6vh] text-center  w-[60vw] mx-auto _____ mbl:w-[40vw] mbl:my-[3vw]" id="adoptBestFriend">
 
             <!-- adopt selection heading -->
             <h1>
@@ -138,7 +138,7 @@
         </div>
 
         <!-- select Adoption -->
-        <div class=" flex justify-center gap-[2vw] text-[2rem] font-extrabold text-text my-[8vh] mbl:text-[1.5rem]"
+        <div class="hidden flex justify-center gap-[2vw] text-[2rem] font-extrabold text-text my-[8vh] mbl:text-[1.5rem]"
             id="adoption_category">
 
             <!-- dog -->
@@ -182,68 +182,19 @@
 
             <!-- sort by price btn -->
             <button
-                class="border bg-theme text-white px-[3vw] py-[1.2vw] rounded-2xl text-[2rem] font-semibold _____ mbl:px-[2vw] mbl:py-[0.8vw] mbl:text-[1.2rem]" id="sort_by_price">
+                class="border bg-theme text-white px-[3vw] py-[1.2vw] rounded-2xl text-[2rem] font-semibold _____ mbl:px-[2vw] mbl:py-[0.8vw] mbl:text-[1.2rem]"
+                id="sort_by_price">
                 Sort by Price
             </button>
         </div>
 
         <!-- Peddy -->
-        <div class="grid grid-cols-5 mbl:grid-cols-3 sm:grid-cols-4 gap-[1vw] mb-[8vw]">
+        <div class="hidden grid grid-cols-5 mbl:grid-cols-3 sm:grid-cols-4 gap-[1vw] mb-[8vw]">
 
             <!-- peddy Card container-->
             <div class="border border-text_10 col-span-3 mbl:col-span-2 sm:col-span-3 grid grid-cols-1 mbl:grid-cols-2 sm:grid-cols-3 gap-[1vw] p-[1vw] rounded-xl h-fit"
                 id="pet_container">
 
-                <!-- pet card (MAIN CARD ___ dONT'T DELETE IT) -->
-                <!-- <div class="border border-text_10 rounded-xl  flex-1 p-[1.2vw]"> -->
-
-                <!-- thumbnail -->
-                <!-- <div class="mb-[1.2vw]">
-                        <img src="images/temp/petImage.svg" alt="">
-                    </div> -->
-
-                <!-- Pet Information -->
-                <!-- <div>
-                        <h1 class="text-text font-extrabold text-[2.5rem] md:text-[1.2rem] mbl:text-[1.7rem]">Mister
-                            Tartosh</h1>
-
-                        <div
-                            class="flex flex-col gap-[0.3vw] my-[0.7vw] text-text_60 text-[2rem] mbl:text-[1.3rem] md:text-[1rem]">
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Breed.svg" alt="">
-                                <p>Breed: <span>Golder retriever</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Birth.svg" alt="">
-                                <p>Birth: <span>2024</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
-                                <p>Gender: <span>Female</span></p>
-                            </div>
-                            <div class="flex gap-[0.6vw]">
-                                <img class="w-[1.2vw]" src="images/Icon Image/Price.svg" alt="">
-                                <p>Price: <span>199</span>$</p>
-                            </div>
-                        </div>
-                    </div> -->
-
-                <!-- hr -->
-                <!-- <hr class="border border-text_10 my-[3vw] mbl:mb-[0.7vw]"> -->
-
-                <!-- pet card buttons -->
-                <!-- <div class="flex justify-between">
-                        <button class="peddyCard-button text-text_60 text-[3rem]">
-                            <i class="fa-regular fa-thumbs-up"></i>
-                        </button>
-                        <button class="peddyCard-button text-theme text-[2.5rem] font-bold">
-                            <p>Adopt</p>
-                        </button>
-                        <button class="peddyCard-button text-theme text-[2.5rem] font-bold">
-                            <p>Details</p>
-                        </button>
-                    </div> -->
-                <!-- </div> -->
             </div>
 
 
@@ -268,8 +219,8 @@
             </div>
 
             <!-- Peddy Select -->
-            <div
-                class="border col-span-2 mbl:col-span-1 border-text_10 rounded-xl h-fit grid grid-cols-1 md:grid-cols-2 gap-[1vw] p-[1vw]" id="likedPet">
+            <div class="border col-span-2 mbl:col-span-1 border-text_10 rounded-xl h-fit grid grid-cols-1 md:grid-cols-2 gap-[1vw] p-[1vw]"
+                id="likedPet">
                 <!-- <img src="images/temp/petImage.svg" alt="">
                 <img src="images/temp/petImage.svg" alt="">
                 <img src="images/temp/petImage.svg" alt="">
@@ -279,6 +230,94 @@
                 <img src="images/temp/petImage.svg" alt=""> -->
             </div>
         </div>
+
+
+
+        <!-- modals -->
+        <div id="pet_details_modal" class="bg-white border rounded-3xl h-fit mbl:w-[40vw] w-[50vw] mx-auto p-[2vw]">
+
+            <!-- thumbnail -->
+            <div class="object-contain ">
+                <img class="rounded-xl" src="images/thumb.svg" alt="">
+            </div>
+
+            <!-- Pet Info -->
+            <div class="">
+                <h1 class="text-text mbl:text-[1.5rem] text-[2.5rem] py-[0.8vw] font-extrabold">Alessia Max</h1>
+
+                <div class="text-text_70 grid grid-cols-2 text-[1.6rem] mbl:text-[1rem]">
+                    <!-- <div class="flex gap-[0.6vw]">
+                        <img class="w-[1.2vw]" src="images/Icon Image/Breed.svg" alt="">
+                        <p>Breed: <span>${pet?.breed || ' Not Available'}</span></p>
+                    </div>
+                    <div class="flex gap-[0.6vw]">
+                        <img class="w-[1.2vw]" src="images/Icon Image/Birth.svg" alt="">
+                        <p>Birth: <span>${pet?.date_of_birth || ' Not Available'}</span></p>
+                    </div>
+                    <div class="flex gap-[0.6vw]">
+                        <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
+                        <p>Gender: <span>${pet?.gender || ' Not Available'}</span></p>
+                    </div>
+                    <div class="flex gap-[0.6vw]">
+                        <img class="w-[1.2vw]" src="images/Icon Image/Price.svg" alt="">
+                        <p>Price: <span>${pet?.price || ' 00'}</span>$</p>
+                    </div>
+
+                    <div class="flex gap-[0.6vw]">
+                        <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
+                        <p>Vaccinated status: <span>${pet?.gender || ' Not Available'}</span></p>
+                    </div> -->
+                    <div class="flex gap-[0.6vw] pb-[.2vw]">
+                        <img class="w-[1.2vw]" src="images/Icon Image/Breed.svg" alt="">
+                        <p>Breed: <span> Golder retriever</span></p>
+                    </div>
+                    <div class="flex gap-[0.6vw] pb-[.2vw]">
+                        <img class="w-[1.2vw]" src="images/Icon Image/Birth.svg" alt="">
+                        <p>Birth: <span>2024</span></p>
+                    </div>
+                    <div class="flex gap-[0.6vw] pb-[.2vw]">
+                        <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
+                        <p>Gender: <span>Female</span></p>
+                    </div>
+                    <div class="flex gap-[0.6vw] pb-[.2vw]">
+                        <img class="w-[1.2vw]" src="images/Icon Image/Price.svg" alt="">
+                        <p>Price: <span>199</span>$</p>
+                    </div>
+
+                    <div class="flex gap-[0.6vw] pb-[.2vw]">
+                        <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
+                        <p>Vaccinated status: <span>Partially</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- hr -->
+            <div class="py-[1vw]">
+                <hr class="border border-text_10">
+            </div>
+
+            <!-- pet details -->
+            <div class="pb-[1vw]">
+                <h1 class="text-text font-bold pb-[1vw] text-[1.8rem] mbl:text-[1.2rem]">
+                    Details Information
+                </h1>
+                <p class="text-text_70 text-[1.6rem] mbl:text-[1rem]">
+                    It is a long established fact that a reader will be distracted by the readable content of a page
+                    when
+                    looking at its layout. The point of using is that it has a more-or-less normal distribution of
+                    letters, as opposed to
+                    using.
+                </p>
+
+            </div>
+
+            <!-- cancel btn -->
+            <button
+                class="border-[0.2vw] border-theme_10 bg-theme_15 w-[100%] text-theme font-bold text-[1.8rem] mbl:text-[1.2rem] py-[0.7vw] rounded-xl">
+                Cancel
+            </button>
+        </div>
+
     </main>
 
 

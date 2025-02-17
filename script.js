@@ -71,6 +71,7 @@ const showAllPet = async () => {
         sortByPrice(data);
     });
     addPet(data);
+    p(data);
 }
 showAllPet();
 
