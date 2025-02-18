@@ -198,7 +198,7 @@ const addPet = (petData) => {
 }
 
 
-//show thumbnail 
+//show thumbnail details pet
 const showThumbnail = (petImage) => {
     p(petImage);
     const likedDiv = id("likedPet");
@@ -212,7 +212,23 @@ const showThumbnail = (petImage) => {
 
 
 
+// coundown modal
 
+const three = id("three");
+const two = id("two");
+const one = id("one");
+
+const timmer = (numb) => {
+    two.classList.add("hidden");
+    one.classList.add("hidden");
+    three.classList.add("hidden");
+    numb.classList.replace("hidden", "block");
+}
+
+
+// const time_3 = setTimeout(() => { timmer(three) }, 1000);
+const time_2 = setTimeout(() => { timmer(two) }, 1000);
+const time_1 = setTimeout(() => { timmer(one) }, 2000);
 
 // _________________________________________________Peddy Sort by price________________________________________________________
 

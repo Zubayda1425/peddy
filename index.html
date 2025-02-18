@@ -83,7 +83,7 @@
     <main class=" mx-[7vw] mt-[5vw] max-auto">
 
         <!-- banner -->
-        <div class="hidden mt-[8vh] text-center  w-[70vw] mx-auto _____ mbl:w-[50vw] mbl:my-[3vw]">
+        <div class=" mt-[8vh] text-center  w-[70vw] mx-auto _____ mbl:w-[50vw] mbl:my-[3vw]">
 
             <!-- text portion -->
             <p class="text-[2.5rem] text-text_60 font-bold mb-[4vw] _____ mbl:text-[1.5rem] mbl:mb-[2vw]">Bringing
@@ -123,7 +123,7 @@
 
 
         <!-- adopts best friend heading  -->
-        <div class="hidden mt-[6vh] text-center  w-[60vw] mx-auto _____ mbl:w-[40vw] mbl:my-[3vw]" id="adoptBestFriend">
+        <div class=" mt-[6vh] text-center  w-[60vw] mx-auto _____ mbl:w-[40vw] mbl:my-[3vw]" id="adoptBestFriend">
 
             <!-- adopt selection heading -->
             <h1>
@@ -138,7 +138,7 @@
         </div>
 
         <!-- select Adoption -->
-        <div class="hidden flex justify-center gap-[2vw] text-[2rem] font-extrabold text-text my-[8vh] mbl:text-[1.5rem]"
+        <div class=" flex justify-center gap-[2vw] text-[2rem] font-extrabold text-text my-[8vh] mbl:text-[1.5rem]"
             id="adoption_category">
 
             <!-- dog -->
@@ -189,7 +189,7 @@
         </div>
 
         <!-- Peddy -->
-        <div class="hidden grid grid-cols-5 mbl:grid-cols-3 sm:grid-cols-4 gap-[1vw] mb-[8vw]">
+        <div class=" grid grid-cols-5 mbl:grid-cols-3 sm:grid-cols-4 gap-[1vw] mb-[8vw]">
 
             <!-- peddy Card container-->
             <div class="border border-text_10 col-span-3 mbl:col-span-2 sm:col-span-3 grid grid-cols-1 mbl:grid-cols-2 sm:grid-cols-3 gap-[1vw] p-[1vw] rounded-xl h-fit"
@@ -234,7 +234,8 @@
 
 
         <!-- modals -->
-        <div id="pet_details_modal" class="bg-white border rounded-3xl h-fit mbl:w-[40vw] w-[50vw] mx-auto p-[2vw]">
+        <div id="pet_details_modal"
+            class="hidden bg-white border rounded-3xl h-fit mbl:w-[40vw] w-[50vw] mx-auto p-[2vw] ">
 
             <!-- thumbnail -->
             <div class="object-contain ">
@@ -316,6 +317,22 @@
                 class="border-[0.2vw] border-theme_10 bg-theme_15 w-[100%] text-theme font-bold text-[1.8rem] mbl:text-[1.2rem] py-[0.7vw] rounded-xl">
                 Cancel
             </button>
+        </div>
+
+
+        <!-- modals adoption -->
+        <div id="hidden adoption_modal"
+            class="mx-auto w-[25vw] border h-fit text-text flex flex-col justify-center items-center py-[2vw] rounded-xl">
+
+            <img class="w-[4vw] animate-bounce" src="images/handshake.svg" alt="">
+            <h1 class="text-[2.5rem] font-extrabold">Congrates</h1>
+
+            <p class="text-[1.2rem] text-text_70">Adoption Process is Start For your Pet</p>
+
+            <h1 class="text-[5rem] font-black " id="three">3</h1>
+            <h1 class="text-[5rem] font-black hidden" id="two">2</h1>
+            <h1 class="text-[5rem] font-black hidden" id="one">1</h1>
+
         </div>
 
     </main>
@@ -409,6 +426,11 @@
 
 
     <script src="script.js"></script>
+    <script>
+
+
+
+    </script>
 </body>
 
 </html>
