@@ -6,11 +6,17 @@
     }
 
 
-    .peddyCard-button{
-        @apply border border-theme_10  mbl:text-[1.2rem] px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg  hover:bg-theme hover:text-white hover:border-0 focus:bg-theme focus:text-white focus:border-0
+    .peddyCard-button
+    {
+        @apply border border-theme_10 px-[3vw] mbl:px-[1.2vw] py-[0.2vw] rounded-lg  
+    }
+
+
+    .detailsModal{
+        @apply flex gap-[0.6vw] pb-[.2vw]
     }
 }
-
+    
 @theme{
 
     /* Color */
@@ -32,7 +38,7 @@
     --breakpoint-mbl: 27rem;
 }
 
-*{
-    font-family: "Lato", serif;font-family: "Lato", serif;
+* {
+    font-family: "Lato", serif;
     font-style: normal;
 }

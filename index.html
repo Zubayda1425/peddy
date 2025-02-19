@@ -20,7 +20,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body>
@@ -83,7 +82,7 @@
     <main class=" mx-[7vw] mt-[5vw] max-auto">
 
         <!-- banner -->
-        <div class=" mt-[8vh] text-center  w-[70vw] mx-auto _____ mbl:w-[50vw] mbl:my-[3vw]">
+        <div class="hidden mt-[8vh] text-center  w-[70vw] mx-auto _____ mbl:w-[50vw] mbl:my-[3vw]">
 
             <!-- text portion -->
             <p class="text-[2.5rem] text-text_60 font-bold mb-[4vw] _____ mbl:text-[1.5rem] mbl:mb-[2vw]">Bringing
@@ -219,7 +218,7 @@
             </div>
 
             <!-- Peddy Select -->
-            <div class="border col-span-2 mbl:col-span-1 border-text_10 rounded-xl h-fit grid grid-cols-1 md:grid-cols-2 gap-[1vw] p-[1vw]"
+            <div class="min-h-[60vh] border col-span-2 mbl:col-span-1 border-text_10 rounded-xl h-fit grid grid-cols-1 md:grid-cols-2 gap-[1vw] p-[1vw] auto-rows-min "
                 id="likedPet">
                 <!-- <img src="images/temp/petImage.svg" alt="">
                 <img src="images/temp/petImage.svg" alt="">
@@ -233,107 +232,27 @@
 
 
 
-        <!-- modals -->
-        <div id="pet_details_modal"
-            class="hidden bg-white border rounded-3xl h-fit mbl:w-[40vw] w-[50vw] mx-auto p-[2vw] ">
-
-            <!-- thumbnail -->
-            <div class="object-contain ">
-                <img class="rounded-xl" src="images/thumb.svg" alt="">
-            </div>
-
-            <!-- Pet Info -->
-            <div class="">
-                <h1 class="text-text mbl:text-[1.5rem] text-[2.5rem] py-[0.8vw] font-extrabold">Alessia Max</h1>
-
-                <div class="text-text_70 grid grid-cols-2 text-[1.6rem] mbl:text-[1rem]">
-                    <!-- <div class="flex gap-[0.6vw]">
-                        <img class="w-[1.2vw]" src="images/Icon Image/Breed.svg" alt="">
-                        <p>Breed: <span>${pet?.breed || ' Not Available'}</span></p>
-                    </div>
-                    <div class="flex gap-[0.6vw]">
-                        <img class="w-[1.2vw]" src="images/Icon Image/Birth.svg" alt="">
-                        <p>Birth: <span>${pet?.date_of_birth || ' Not Available'}</span></p>
-                    </div>
-                    <div class="flex gap-[0.6vw]">
-                        <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
-                        <p>Gender: <span>${pet?.gender || ' Not Available'}</span></p>
-                    </div>
-                    <div class="flex gap-[0.6vw]">
-                        <img class="w-[1.2vw]" src="images/Icon Image/Price.svg" alt="">
-                        <p>Price: <span>${pet?.price || ' 00'}</span>$</p>
-                    </div>
-
-                    <div class="flex gap-[0.6vw]">
-                        <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
-                        <p>Vaccinated status: <span>${pet?.gender || ' Not Available'}</span></p>
-                    </div> -->
-                    <div class="flex gap-[0.6vw] pb-[.2vw]">
-                        <img class="w-[1.2vw]" src="images/Icon Image/Breed.svg" alt="">
-                        <p>Breed: <span> Golder retriever</span></p>
-                    </div>
-                    <div class="flex gap-[0.6vw] pb-[.2vw]">
-                        <img class="w-[1.2vw]" src="images/Icon Image/Birth.svg" alt="">
-                        <p>Birth: <span>2024</span></p>
-                    </div>
-                    <div class="flex gap-[0.6vw] pb-[.2vw]">
-                        <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
-                        <p>Gender: <span>Female</span></p>
-                    </div>
-                    <div class="flex gap-[0.6vw] pb-[.2vw]">
-                        <img class="w-[1.2vw]" src="images/Icon Image/Price.svg" alt="">
-                        <p>Price: <span>199</span>$</p>
-                    </div>
-
-                    <div class="flex gap-[0.6vw] pb-[.2vw]">
-                        <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
-                        <p>Vaccinated status: <span>Partially</span></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- hr -->
-            <div class="py-[1vw]">
-                <hr class="border border-text_10">
-            </div>
-
-            <!-- pet details -->
-            <div class="pb-[1vw]">
-                <h1 class="text-text font-bold pb-[1vw] text-[1.8rem] mbl:text-[1.2rem]">
-                    Details Information
-                </h1>
-                <p class="text-text_70 text-[1.6rem] mbl:text-[1rem]">
-                    It is a long established fact that a reader will be distracted by the readable content of a page
-                    when
-                    looking at its layout. The point of using is that it has a more-or-less normal distribution of
-                    letters, as opposed to
-                    using.
-                </p>
-
-            </div>
-
-            <!-- cancel btn -->
-            <button
-                class="border-[0.2vw] border-theme_10 bg-theme_15 w-[100%] text-theme font-bold text-[1.8rem] mbl:text-[1.2rem] py-[0.7vw] rounded-xl">
-                Cancel
-            </button>
-        </div>
+        <!-- Details modal -->
+        <dialog id="pet_details_modal"
+            class="hidden bg-white rounded-3xl my-auto mbl:w-[40vw] w-[50vw] mx-auto p-[2vw] grid grid-col-1">
+        </dialog>
 
 
         <!-- modals adoption -->
-        <div id="hidden adoption_modal"
-            class="mx-auto w-[25vw] border h-fit text-text flex flex-col justify-center items-center py-[2vw] rounded-xl">
+        <dialog
+            class="hidden mx-auto my-auto w-[25vw] h-fit text-text flex flex-col justify-center items-center py-[2vw] rounded-xl"
+            id="adoption_modal">
 
             <img class="w-[4vw] animate-bounce" src="images/handshake.svg" alt="">
             <h1 class="text-[2.5rem] font-extrabold">Congrates</h1>
 
             <p class="text-[1.2rem] text-text_70">Adoption Process is Start For your Pet</p>
 
-            <h1 class="text-[5rem] font-black " id="three">3</h1>
+            <h1 class="text-[5rem] font-black hidden" id="three">3</h1>
             <h1 class="text-[5rem] font-black hidden" id="two">2</h1>
             <h1 class="text-[5rem] font-black hidden" id="one">1</h1>
 
-        </div>
+        </dialog>
 
     </main>
 
@@ -426,11 +345,6 @@
 
 
     <script src="script.js"></script>
-    <script>
-
-
-
-    </script>
 </body>
 
 </html>

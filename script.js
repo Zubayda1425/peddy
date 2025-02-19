@@ -140,6 +140,8 @@ const addPet = (petData) => {
             // p(pet);
             const petDetails = document.createElement("div");
             petDetails.classList.add("border", "border-text_10", "rounded-xl", "flex-1", "p-[1.2vw]");
+
+
             petDetails.innerHTML = `
                             <!-- thumbnail -->
                             <div class="mb-[1.2vw]">
@@ -176,14 +178,14 @@ const addPet = (petData) => {
     
                             <!-- pet card buttons -->
                             <div class="flex justify-between">
-                                <button class="peddyCard-button text-text_60 text-[3rem]" id="like" onclick="showThumbnail('${pet.image}')">
+                                <button class="peddyCard-button text-text_60 text-[3rem] hover:bg-theme hover:text-white hover:border-0  mbl:text-[1.2rem] " id="like" onclick="showThumbnail('${pet.image}')">
                                     <i class="fa-regular fa-thumbs-up"></i>
                                 </button>
-                                <button class="peddyCard-button text-theme text-[2.5rem] font-bold" id="adopt">
-                                    <p>Adopt</p>
+                                <button onclick="adoptionModal(${pet.petId})" class="peddyCard-button text-theme text-[2.5rem] font-bold hover:bg-theme hover:text-white hover:border-0  mbl:text-[1.2rem] " id="${pet.petId}" >  
+                                    <p  >Adopt</p>
                                 </button>
-                                <button class="peddyCard-button text-theme text-[2.5rem] font-bold" id="details">
-                                    <p>Details</p>
+                                <button class="peddyCard-button text-theme text-[2.5rem] font-bold hover:bg-theme hover:text-white hover:border-0  mbl:text-[1.2rem] " id="details">
+                                    <p onclick="showDetailModal('${pet.image}' , '${pet.pet_name}', '${pet.breed}', '${pet.date_of_birth}', '${pet.gender}', '${pet.price}', '${pet.vaccinated_status}')">Details</p>
                                 </button>
                             </div>
             `;
@@ -198,38 +200,161 @@ const addPet = (petData) => {
 }
 
 
-//show thumbnail details pet
+
+//show thumbnail 
 const showThumbnail = (petImage) => {
     p(petImage);
     const likedDiv = id("likedPet");
-    const petThumb = document.createElement("div");
-    petThumb.innerHTML = `
-    <img src="${petImage}" alt="">
-    `;
-    likedDiv.appendChild(petThumb);
+
+    likedDiv.classList.remove("hidden");
+
+    const img = document.createElement("img");
+    img.src = petImage;
+    likedDiv.appendChild(img);
 }
+
+
+
+// _________________________________________________Modals________________________________________________________
+
+
+
+// show details modal
+const showDetailModal = (image, pet_name, breed, date_of_birth, gender, price, vaccinated_status) => {
+    const pet_details = id("pet_details_modal");
+    pet_details.classList.replace("hidden", "block");
+    pet_details.innerHTML = `
+            <!-- thumbnail -->
+            <div class=" h-fit w-full">
+                <img class="rounded-xl size-[100%]" src="${image}" alt="">
+            </div>
+
+            <!-- Pet Info -->
+            <div class="">
+                <h1 class="text-text mbl:text-[1.5rem] text-[2.5rem] py-[0.8vw] font-extrabold">${pet_name}</h1>
+
+                <div class="text-text_70 grid grid-cols-2 text-[1.6rem] mbl:text-[1rem]">
+
+                    <div class="detailsModal">
+                        <img class="w-[1.2vw]" src="images/Icon Image/Breed.svg" alt="">
+                        <p>Breed: <span>${breed || ' Not Available'}</span></p>
+                    </div>
+                    <div class="detailsModal">
+                        <img class="w-[1.2vw]" src="images/Icon Image/Birth.svg" alt="">
+                        <p>Birth: <span>${date_of_birth || ' Not Available'}</span></p>
+                    </div>
+                    <div class="detailsModal">
+                        <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
+                        <p>Gender: <span>${gender || ' Not Available'}</span></p>
+                    </div>
+                    <div class="detailsModal">
+                        <img class="w-[1.2vw]" src="images/Icon Image/Price.svg" alt="">
+                        <p>Price: <span>${price || ' 00'}</span>$</p>
+                    </div>
+
+                    <div class="detailsModal">
+                        <img class="w-[1.2vw]" src="images/Icon Image/Gender.svg" alt="">
+                        <p>Vaccinated status: <span>${vaccinated_status || ' Not Available'}</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- hr -->
+            <div class="py-[1vw]">
+                <hr class="border border-text_10">
+            </div>
+
+            <!-- pet details -->
+            <div class="pb-[1vw]">
+                <h1 class="text-text font-bold pb-[1vw] text-[1.8rem] mbl:text-[1.2rem]">
+                    Details Information
+                </h1>
+                <p class="text-text_70 text-[1.6rem] mbl:text-[1rem]">
+                    It is a long established fact that a reader will be distracted by the readable content of a page
+                    when
+                    looking at its layout. The point of using is that it has a more-or-less normal distribution of
+                    letters, as opposed to
+                    using.
+                </p>
+
+            </div>
+
+            <!-- cancel btn -->
+            <button
+                class="border-[0.2vw] border-theme_10 bg-theme_15 w-[100%] text-theme font-bold text-[1.8rem] mbl:text-[1.2rem] py-[0.7vw] rounded-xl"
+                id="close_modal">
+                Cancel
+            </button>
+    `;
+    pet_details.showModal();
+    document.getElementById("close_modal").addEventListener("click", () => {
+        pet_details.close();
+        pet_details.classList.replace("block", "hidden");
+    });
+};
+
+
 
 
 
 
 // coundown modal
+const adoptionModal = (idNum) => {
 
-const three = id("three");
-const two = id("two");
-const one = id("one");
+    const adoptionBtn = id(idNum); // alhamdulillah ___ a big achievement <3 
 
-const timmer = (numb) => {
-    two.classList.add("hidden");
-    one.classList.add("hidden");
-    three.classList.add("hidden");
-    numb.classList.replace("hidden", "block");
+    const adoption = id("adoption_modal");
+    adoption.classList.replace("hidden", "block");
+    adoption.showModal();
+
+    const three = id("three");
+    const two = id("two");
+    const one = id("one");
+
+
+
+    // setTimeout(() => { timmer(three) }, 1000);
+
+    three.classList.replace("hidden", "block");// 1: h// 2:h// 3:block//
+    setTimeout(() => {
+        // one.classList.replace("hidden");
+        three.classList.replace("block", "hidden");
+        two.classList.replace("hidden", "block");
+    }, 1000);// 1: h// 2:block// 3:h//
+    setTimeout(() => {
+        one.classList.replace("hidden", "block");
+        two.classList.replace("block", "hidden");
+
+        setTimeout(() => {
+            adoption.classList.replace("block", "hidden");
+            adoption.close();
+            three.classList.replace("hidden", "block");
+            one.classList.replace("block", "hidden");
+
+            p("dbfgvkbdfkgvbasdrhgb");
+
+            p(adoptionBtn);
+            // adoptionBtn.classList.add("pointer-events-none");
+            // document.adoptionBtn.createAttribute("disabled");
+            adoptionBtn.setAttribute("disabled", true);
+            adoptionBtn.classList.replace("text-theme", "text-text_60");
+            adoptionBtn.classList.replace("mbl:text-[1.2rem]", "mbl:text-[1rem]");
+            adoptionBtn.classList.add("cursor-not-allowed");
+            adoptionBtn.classList.remove("hover:bg-theme", "hover:text-white", "hover:border-0");
+            adoptionBtn.innerText = `Adopted`;
+
+
+        }, 1000);
+    }, 2000);// 1:block// 2:h// 3:h//
+
+
+
 }
 
 
-// const time_3 = setTimeout(() => { timmer(three) }, 1000);
-const time_2 = setTimeout(() => { timmer(two) }, 1000);
-const time_1 = setTimeout(() => { timmer(one) }, 2000);
-
-// _________________________________________________Peddy Sort by price________________________________________________________
 
 
+
+const dis = () => {
+    p("disabled");
+}
