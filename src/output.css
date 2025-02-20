@@ -743,6 +743,9 @@
   .my-\[8vh\] {
     margin-block: 8vh;
   }
+  .my-\[10vh\] {
+    margin-block: 10vh;
+  }
   .my-auto {
     margin-block: auto;
   }
@@ -860,6 +863,14 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .size-\[5\.5vw\] {
+    width: 5.5vw;
+    height: 5.5vw;
+  }
+  .size-\[7vw\] {
+    width: 7vw;
+    height: 7vw;
+  }
   .size-\[100\%\] {
     width: 100%;
     height: 100%;
@@ -889,17 +900,20 @@
   .w-0 {
     width: calc(var(--spacing) * 0);
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
   .w-\[1\.2vw\] {
     width: 1.2vw;
   }
+  .w-\[3vw\] {
+    width: 3vw;
+  }
   .w-\[4vw\] {
     width: 4vw;
+  }
+  .w-\[5vw\] {
+    width: 5vw;
   }
   .w-\[20vw\] {
     width: 20vw;
@@ -910,17 +924,11 @@
   .w-\[30vw\] {
     width: 30vw;
   }
-  .w-\[3vw\] {
-    width: 3vw;
-  }
   .w-\[50\%\] {
     width: 50%;
   }
   .w-\[50vw\] {
     width: 50vw;
-  }
-  .w-\[5vw\] {
-    width: 5vw;
   }
   .w-\[60vw\] {
     width: 60vw;
@@ -1082,6 +1090,9 @@
   }
   .animate-none {
     animation: none;
+  }
+  .animate-spin {
+    animation: var(--animate-spin);
   }
   .cursor-not-allowed {
     cursor: not-allowed;
@@ -1673,6 +1684,17 @@
   }
   .via-none {
     --tw-gradient-via-stops: initial;
+  }
+  .from-black {
+    --tw-gradient-from: var(--color-black);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-white {
+    --tw-gradient-to: var(--color-white);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-80\% {
+    --tw-gradient-to-position: 80%;
   }
   .box-decoration-clone {
     -webkit-box-decoration-break: clone;
@@ -2600,6 +2622,18 @@
       display: none;
     }
   }
+  .mbl\:size-\[4vw\] {
+    @media (width >= 27rem) {
+      width: 4vw;
+      height: 4vw;
+    }
+  }
+  .mbl\:size-\[5vw\] {
+    @media (width >= 27rem) {
+      width: 5vw;
+      height: 5vw;
+    }
+  }
   .mbl\:w-\[3vw\] {
     @media (width >= 27rem) {
       width: 3vw;
@@ -2661,11 +2695,6 @@
       padding-block: 0.8vw;
     }
   }
-  .mbl\:text-\[0\.8rem\] {
-    @media (width >= 27rem) {
-      font-size: 0.8rem;
-    }
-  }
   .mbl\:text-\[1\.2rem\] {
     @media (width >= 27rem) {
       font-size: 1.2rem;
@@ -2721,26 +2750,6 @@
       font-size: 4.5rem;
     }
   }
-  .mbl\:text-\[08rem\] {
-    @media (width >= 27rem) {
-      font-size: 08rem;
-    }
-  }
-  .mbl\:text-\[0rem\] {
-    @media (width >= 27rem) {
-      font-size: 0rem;
-    }
-  }
-  .mbl\:text-\[8rem\] {
-    @media (width >= 27rem) {
-      font-size: 8rem;
-    }
-  }
-  .mbl\:text-\[rem\] {
-    @media (width >= 27rem) {
-      color: rem;
-    }
-  }
   .sm\:col-span-3 {
     @media (width >= 40rem) {
       grid-column: span 3 / span 3;
@@ -2754,6 +2763,18 @@
   .sm\:grid-cols-4 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .md\:size-\[2\.5vw\] {
+    @media (width >= 48rem) {
+      width: 2.5vw;
+      height: 2.5vw;
+    }
+  }
+  .md\:size-\[3vw\] {
+    @media (width >= 48rem) {
+      width: 3vw;
+      height: 3vw;
     }
   }
   .md\:w-\[8vw\] {
@@ -2990,6 +3011,48 @@
   syntax: "*";
   inherits: false;
   initial-value: 0;
+}
+@property --tw-gradient-position {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-via {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-to {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-via-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --tw-gradient-via-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --tw-gradient-to-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
 }
 @property --tw-leading {
   syntax: "*";

@@ -136,42 +136,15 @@
                 layout. The point of using Lorem Ipsum is that it has a.</p>
         </div>
 
-        <!-- select Adoption -->
+        <!-- select Adoption Category-->
         <div class=" flex justify-center gap-[2vw] text-[2rem] font-extrabold text-text my-[8vh] mbl:text-[1.5rem]"
             id="adoption_category">
-
-            <!-- dog -->
-            <!-- <button class="adoption-btn">
-
-                <img class="w-[50%] md:w-[37%]" src="images/Peddy Image/dog.svg" alt="">
-                <p>Dogs</p>
-
-            </button> -->
-
-            <!-- cat -->
-            <!-- <button class="adoption-btn">
-
-                <img class="w-[50%] md:w-[37%]" src="images/Peddy Image/cat.svg" alt="">
-                <p>Cats</p>
-
-            </button> -->
-
-            <!-- Rabbit -->
-            <!-- <button class="adoption-btn">
-
-                <img class="w-[50%] md:w-[37%]" src="images/Peddy Image/rabbit.svg" alt="">
-                <p>Rabbits</p>
-
-            </button> -->
-
-            <!-- bird -->
-            <!-- <button class="adoption-btn">
-
-                <img class="w-[50%] md:w-[37%]" src="images/Peddy Image/parrot.svg" alt="">
-                <p>Birds</p>
-
-            </button> -->
         </div>
+
+        
+
+
+
 
         <!-- Pet Section heading -->
         <div class="flex justify-between items-center mb-[3vw]">
@@ -187,8 +160,16 @@
             </button>
         </div>
 
+        <!-- loading Spinner -->
+        <div class="hidden animate-spin size-[7vw] mbl:size-[5vw] md:size-[3vw] rounded-full bg-conic from-black to-white to-80% flex justify-center items-center mx-auto my-[10vh] "
+            id="loading_spin">
+            <div class="size-[5.5vw] mbl:size-[4vw] md:size-[2.5vw] rounded-full bg-white ">
+
+            </div>
+        </div>
+
         <!-- Peddy -->
-        <div class=" grid grid-cols-5 mbl:grid-cols-3 sm:grid-cols-4 gap-[1vw] mb-[8vw]">
+        <div class=" grid grid-cols-5 mbl:grid-cols-3 sm:grid-cols-4 gap-[1vw] mb-[8vw]" id="peddy_container">
 
             <!-- peddy Card container-->
             <div class="border border-text_10 col-span-3 mbl:col-span-2 sm:col-span-3 grid grid-cols-1 mbl:grid-cols-2 sm:grid-cols-3 gap-[1vw] p-[1vw] rounded-xl h-fit"
@@ -231,6 +212,7 @@
         </div>
 
 
+        <!-- _____________________________________Modals________________________________________________ -->
 
         <!-- Details modal -->
         <dialog id="pet_details_modal"

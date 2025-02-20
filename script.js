@@ -1,3 +1,17 @@
+// loading
+const toggleLoading = (isLoading) => {
+    const loading = document.getElementById('loading_spin');
+    const peddy = id("peddy_container");
+    if (isLoading) {
+        loading.classList.remove('hidden');
+        peddy.classList.add("hidden");
+    }
+    else {
+        loading.classList.add('hidden');
+        peddy.classList.remove("hidden");
+    }
+};
+
 
 // _________________________________________________style________________________________________________________
 
@@ -64,58 +78,89 @@ petCatagory();
 
 // show all pets
 const showAllPet = async () => {
+
     const res = await fetch(`https://openapi.programming-hero.com/api/peddy/pets`);
     const dataJson = await res.json();
     const data = dataJson.pets;
+
+    // document.getElementById("sort_by_price").addEventListener("click", function () {
+    //     toggleLoading(true);
+    //     setTimeout(async () => {
+    //         sortByPrice(data);
+    //         toggleLoading(false);
+    //     }, 1000);
+    // });
+
     document.getElementById("sort_by_price").addEventListener("click", function () {
+
+
         sortByPrice(data);
+
+
     });
     addPet(data);
-    p(data);
 }
 showAllPet();
 
 
 
 // show categorized pets
-const showCategorizedPet = async (category) => {
-    const res = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`);
-    const dataJson = await res.json();
-    const data = dataJson.data;
-    document.getElementById("sort_by_price").addEventListener("click", function () {
-        sortByPrice(data);
-    });
-    addPet(data);
+const showCategorizedPet = (category) => {
+    toggleLoading(true);
+    setTimeout(async () => {
+        const res = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`);
+        const dataJson = await res.json();
+        const data = dataJson.data;
+        toggleLoading(false);
+        document.getElementById("sort_by_price").addEventListener("click", function () {
+            sortByPrice(data);
+        });
+        addPet(data);
+    }, 1000)
+
+
+    // const res = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`);
+    // const dataJson = await res.json();
+    // const data = dataJson.data;
+
+    // document.getElementById("sort_by_price").addEventListener("click", function () {
+    //     sortByPrice(data);
+    // });
+    // addPet(data);
 }
 
 
 //sort by price 
 const sortByPrice = (data) => {
-    let price = [];
-    let sortedData = [];
+    toggleLoading(true);
+    setTimeout(() => {
+        toggleLoading(false);
+        let price = [];
+        let sortedData = [];
 
 
-    data.forEach(pet => {
-        if (!price.includes(pet.price)) {
-            price.push(pet.price);
-        }
-    });
-
-    price.sort(function (a, b) {
-        return b - a
-    });
-
-
-    price.forEach(petPrice => {
         data.forEach(pet => {
-            if (pet.price === petPrice) {
-                sortedData.push(pet);
+            if (!price.includes(pet.price)) {
+                price.push(pet.price);
             }
-        })
-    })
+        });
 
-    // p(sortedData);
-    addPet(sortedData);
+        price.sort(function (a, b) {
+            return b - a
+        });
+
+
+        price.forEach(petPrice => {
+            data.forEach(pet => {
+                if (pet.price === petPrice) {
+                    sortedData.push(pet);
+                }
+            })
+        })
+
+        // p(sortedData);
+        addPet(sortedData);
+    }, 1000);
 }
 
 
@@ -295,9 +340,6 @@ const showDetailModal = (image, pet_name, breed, date_of_birth, gender, price, v
 
 
 
-
-
-
 // coundown modal
 const adoptionModal = (idNum) => {
 
@@ -355,6 +397,3 @@ const adoptionModal = (idNum) => {
 
 
 
-const dis = () => {
-    p("disabled");
-}
