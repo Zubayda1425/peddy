@@ -1,26 +1,5 @@
-// loading
-const toggleLoading = (isLoading) => {
-    const loading = document.getElementById('loading_spin');
-    const peddy = id("peddy_container");
-    if (isLoading) {
-        loading.classList.remove('hidden');
-        peddy.classList.add("hidden");
-    }
-    else {
-        loading.classList.add('hidden');
-        peddy.classList.remove("hidden");
-    }
-};
-
-
-// _________________________________________________style________________________________________________________
-
-// toggle menu
-function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.classList.toggle("w-[50vw]");
-}
 // _________________________________________________basic need________________________________________________________
+
 
 
 // print function
@@ -28,10 +7,37 @@ const p = data => {
     console.log(data);
 }
 
+
 //select element By Id
 const id = data => {
     return document.getElementById(data);
 }
+
+
+// toggle menu
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("w-[50vw]");
+}
+
+
+// loading
+const toggleLoading = (isLoading) => {
+    const loading = document.getElementById('loading_spin');
+    const peddy = id("peddy_container");
+
+    // when load __ show
+    if (isLoading) {
+        loading.classList.remove('hidden');
+        peddy.classList.add("hidden");
+    }
+
+    //when stop loading
+    else {
+        loading.classList.add('hidden');
+        peddy.classList.remove("hidden");
+    }
+};
 
 
 
@@ -41,6 +47,8 @@ const id = data => {
 
 // fetch pet category
 const petCatagory = async () => {
+
+    // fetching category
     const res = await fetch(`https://openapi.programming-hero.com/api/peddy/categories`);
     const dataJson = await res.json();
     const data = dataJson.categories;
@@ -55,7 +63,7 @@ const petCatagory = async () => {
 const createCategory = (categoryData) => {
     const categoryContainer = id("adoption_category");
     const categoryButton = document.createElement("div");
-    // categoryButton.classList.add("adoption-btn");
+
     categoryButton.innerHTML = `
         <button class="adoption-btn" onclick="showCategorizedPet('${categoryData.category}')">
             <img class="w-[50%] md:w-[37%]" src="${categoryData.category_icon}" alt="">
@@ -69,29 +77,26 @@ petCatagory();
 
 
 
-
 // _________________________________________________Show all Peddy________________________________________________________
-
-
 
 
 
 // show all pets
 const showAllPet = async () => {
 
+    // fetch all data
     const res = await fetch(`https://openapi.programming-hero.com/api/peddy/pets`);
     const dataJson = await res.json();
     const data = dataJson.pets;
 
+    // sort by price (all data)
     document.getElementById("sort_by_price").addEventListener("click", function () {
-
-
         sortByPrice(data);
-
-
     });
+
     addPet(data);
 }
+
 showAllPet();
 
 
@@ -99,6 +104,7 @@ showAllPet();
 // show categorized pets
 const showCategorizedPet = (category) => {
     toggleLoading(true);
+    // wait 1sec for loading
     setTimeout(async () => {
         const res = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`);
         const dataJson = await res.json();
@@ -109,27 +115,18 @@ const showCategorizedPet = (category) => {
         });
         addPet(data);
     }, 1000)
-
-
-    // const res = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`);
-    // const dataJson = await res.json();
-    // const data = dataJson.data;
-
-    // document.getElementById("sort_by_price").addEventListener("click", function () {
-    //     sortByPrice(data);
-    // });
-    // addPet(data);
 }
 
 
 //sort by price 
 const sortByPrice = (data) => {
     toggleLoading(true);
+
+    // wait for sorting data (loading)
     setTimeout(() => {
         toggleLoading(false);
         let price = [];
         let sortedData = [];
-
 
         data.forEach(pet => {
             if (!price.includes(pet.price)) {
@@ -141,7 +138,6 @@ const sortByPrice = (data) => {
             return b - a
         });
 
-
         price.forEach(petPrice => {
             data.forEach(pet => {
                 if (pet.price === petPrice) {
@@ -150,7 +146,6 @@ const sortByPrice = (data) => {
             })
         })
 
-        // p(sortedData);
         addPet(sortedData);
     }, 1000);
 }
@@ -163,11 +158,13 @@ const addPet = (petData) => {
     const error = id("error_msg");
     const liked = id("likedPet");
 
+    // when categorised data exist______Object.values => for attaching promise value
     if (Object.values(petContainer.classList).includes("hidden")) {
         petContainer.classList.remove("hidden");
         liked.classList.remove("hidden");
     }
 
+    // when categorised data exist______Object.values => for attaching promise value
     if (!Object.values(error.classList).includes("hidden")) {
         error.classList.add("hidden");
     }
@@ -176,7 +173,6 @@ const addPet = (petData) => {
 
     if (petData.length !== 0) {
         petData.forEach(pet => {
-            // p(pet);
             const petDetails = document.createElement("div");
             petDetails.classList.add("border", "border-text_10", "rounded-xl", "flex-1", "p-[1.2vw]");
 
@@ -233,6 +229,7 @@ const addPet = (petData) => {
         });
     }
 
+    // when categorised data not exist
     else {
         petContainer.classList.add("hidden");
         error.classList.remove("hidden");
@@ -329,6 +326,8 @@ const showDetailModal = (image, pet_name, breed, date_of_birth, gender, price, v
             </button>
     `;
     pet_details.showModal();
+
+    // close modal
     document.getElementById("close_modal").addEventListener("click", () => {
         pet_details.close();
         pet_details.classList.replace("block", "hidden");
@@ -338,27 +337,27 @@ const showDetailModal = (image, pet_name, breed, date_of_birth, gender, price, v
 
 // coundown modal
 const adoptionModal = (idNum) => {
-
-    const adoptionBtn = id(idNum); // alhamdulillah ___ a big achievement <3 
+    
+    // id: pet_Id
+    const adoptionBtn = id(idNum);
 
     const adoption = id("adoption_modal");
     adoption.classList.replace("hidden", "block");
     adoption.showModal();
 
+    // timmer
     const three = id("three");
     const two = id("two");
     const one = id("one");
 
 
-
-    // setTimeout(() => { timmer(three) }, 1000);
-
-    three.classList.replace("hidden", "block");// 1: h// 2:h// 3:block//
+    // timmer timming
+    three.classList.replace("hidden", "block");
     setTimeout(() => {
         // one.classList.replace("hidden");
         three.classList.replace("block", "hidden");
         two.classList.replace("hidden", "block");
-    }, 1000);// 1: h// 2:block// 3:h//
+    }, 1000);
     setTimeout(() => {
         one.classList.replace("hidden", "block");
         two.classList.replace("block", "hidden");
@@ -383,10 +382,7 @@ const adoptionModal = (idNum) => {
 
 
         }, 1000);
-    }, 2000);// 1:block// 2:h// 3:h//
-
-
-
+    }, 2000);
 }
 
 
