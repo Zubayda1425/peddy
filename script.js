@@ -224,6 +224,7 @@ const addPet = (petData) => {
                                     <p  >Adopt</p>
                                 </button>
                                 <button class="peddyCard-button text-theme text-[2.5rem] font-bold hover:bg-theme hover:text-white hover:border-0  mbl:text-[1.2rem] " id="details">
+                                    
                                     <p onclick="showDetailModal('${pet.image}' , '${pet.pet_name}', '${pet.breed}', '${pet.date_of_birth}', '${pet.gender}', '${pet.price}', '${pet.vaccinated_status}')">Details</p>
                                 </button>
                             </div>
@@ -261,6 +262,7 @@ const showThumbnail = (petImage) => {
 
 // show details modal
 const showDetailModal = (image, pet_name, breed, date_of_birth, gender, price, vaccinated_status) => {
+
     const pet_details = id("pet_details_modal");
     pet_details.classList.replace("hidden", "block");
     pet_details.innerHTML = `
@@ -271,9 +273,9 @@ const showDetailModal = (image, pet_name, breed, date_of_birth, gender, price, v
 
             <!-- Pet Info -->
             <div class="">
-                <h1 class="text-text mbl:text-[1.5rem] text-[2.5rem] py-[0.8vw] font-extrabold">${pet_name}</h1>
+                <h1 class="text-text lg:text-[2.5rem] md:text-[3rem] mbl:text-[4rem] text-[6rem] py-[0.8vw] font-extrabold">${pet_name}</h1>
 
-                <div class="text-text_70 grid grid-cols-2 text-[1.6rem] mbl:text-[1rem]">
+                <div class="text-text_70 grid grid-cols-2 text-[2.5rem] mbl:text-[2rem] md:text-[1.5rem] lg:text-[1rem]">
 
                     <div class="detailsModal">
                         <img class="w-[1.2vw]" src="images/Icon Image/Breed.svg" alt="">
@@ -300,16 +302,16 @@ const showDetailModal = (image, pet_name, breed, date_of_birth, gender, price, v
             </div>
 
             <!-- hr -->
-            <div class="py-[1vw]">
+            <div class=" py-[3vw]">
                 <hr class="border border-text_10">
             </div>
 
             <!-- pet details -->
-            <div class="pb-[1vw]">
-                <h1 class="text-text font-bold pb-[1vw] text-[1.8rem] mbl:text-[1.2rem]">
+            <div class=" pb-[3vw]">
+                <h1 class="text-text font-bold pb-[1vw] text-[3rem] mbl:text-[2.5rem] md:text-[2rem] lg:text-[1.5rem]">
                     Details Information
                 </h1>
-                <p class="text-text_70 text-[1.6rem] mbl:text-[1rem]">
+                <p class="text-text_70 text-[2.5rem] mbl:text-[2rem] md:text-[1.5rem] lg:text-[1rem]">
                     It is a long established fact that a reader will be distracted by the readable content of a page
                     when
                     looking at its layout. The point of using is that it has a more-or-less normal distribution of
@@ -321,7 +323,7 @@ const showDetailModal = (image, pet_name, breed, date_of_birth, gender, price, v
 
             <!-- cancel btn -->
             <button
-                class="border-[0.2vw] border-theme_10 bg-theme_15 w-[100%] text-theme font-bold text-[1.8rem] mbl:text-[1.2rem] py-[0.7vw] rounded-xl"
+                class="border-[0.2vw] border-theme_10 bg-theme_15 w-[100%] text-theme font-bold text-[2.8rem] mbl:text-[2.5rem] md:text-[2rem] lg:text-[1.5rem] py-[0.7vw] rounded-xl"
                 id="close_modal">
                 Cancel
             </button>
@@ -332,7 +334,6 @@ const showDetailModal = (image, pet_name, breed, date_of_birth, gender, price, v
         pet_details.classList.replace("block", "hidden");
     });
 };
-
 
 
 // coundown modal
