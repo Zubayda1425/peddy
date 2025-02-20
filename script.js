@@ -83,14 +83,6 @@ const showAllPet = async () => {
     const dataJson = await res.json();
     const data = dataJson.pets;
 
-    // document.getElementById("sort_by_price").addEventListener("click", function () {
-    //     toggleLoading(true);
-    //     setTimeout(async () => {
-    //         sortByPrice(data);
-    //         toggleLoading(false);
-    //     }, 1000);
-    // });
-
     document.getElementById("sort_by_price").addEventListener("click", function () {
 
 
@@ -169,9 +161,11 @@ const sortByPrice = (data) => {
 const addPet = (petData) => {
     const petContainer = id("pet_container");
     const error = id("error_msg");
+    const liked = id("likedPet");
 
     if (Object.values(petContainer.classList).includes("hidden")) {
         petContainer.classList.remove("hidden");
+        liked.classList.remove("hidden");
     }
 
     if (!Object.values(error.classList).includes("hidden")) {
@@ -241,6 +235,7 @@ const addPet = (petData) => {
     else {
         petContainer.classList.add("hidden");
         error.classList.remove("hidden");
+        liked.classList.add("hidden");
     }
 }
 
